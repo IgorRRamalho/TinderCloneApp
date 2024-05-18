@@ -67,3 +67,8 @@ Essa é uma visão geral básica de como você pode implementar o padrão MVC em
 
 
 key_api: ezr65rohmUHlKXtiFUmeagBI49tDMxVge1KjFAOrqmWGOKEoaeVLlH9GtaCzNFGl
+
+
+
+
+pass: 6Gmnv92EY1LTBzXx
