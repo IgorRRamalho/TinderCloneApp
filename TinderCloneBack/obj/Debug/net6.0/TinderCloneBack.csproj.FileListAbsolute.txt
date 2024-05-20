@@ -1,0 +1,6 @@
+C:\GitHub\TinderCloneApp\TinderCloneBack\obj\Debug\net6.0\TinderCloneBack.csproj.AssemblyReference.cache
+C:\GitHub\TinderCloneApp\TinderCloneBack\obj\Debug\net6.0\TinderCloneBack.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\TinderCloneApp\TinderCloneBack\obj\Debug\net6.0\TinderCloneBack.AssemblyInfoInputs.cache
+C:\GitHub\TinderCloneApp\TinderCloneBack\obj\Debug\net6.0\TinderCloneBack.AssemblyInfo.cs
+C:\GitHub\TinderCloneApp\TinderCloneBack\obj\Debug\net6.0\TinderCloneBack.csproj.CoreCompileInputs.cache
+C:\GitHub\TinderCloneApp\TinderCloneBack\obj\Debug\net6.0\TinderCloneBack.sourcelink.json
