@@ -8,16 +8,16 @@ namespace TinderClone.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string? Id { get; set; }
 
-        [BsonElement("username")]
-        public string Username { get; set; }
+        [BsonElement("email")]
+        public string Email { get; set; }
 
         [BsonElement("name")]
         public string Name { get; set; }
 
-        [BsonElement("age")]
-        public int Age { get; set; }
+        [BsonElement("dateOfBirth")]
+        public int DateOfBirth { get; set; }
 
         [BsonElement("gender")]
         public string Gender { get; set; }

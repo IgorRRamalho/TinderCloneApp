@@ -1,25 +1,41 @@
 ﻿using TinderClone.Models;
-using TinderClone.Repositories;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 
-namespace TinderClone.Services
+namespace TinderClone.Services;
+
+public class UserService
 {
-    public class UserService
+    private readonly IMongoCollection<User> _Users;
+
+    public UserService(
+        IOptions<TinderCloneDataBaseSettings> tinderCloneDataBaseSettings)
     {
-        private readonly UserRepository _userRepository;
+        var mongoClient = new MongoClient(
+            TinderCloneDataBaseSettings.Value.ConnectionString);
 
-        public UserService(UserRepository userRepository)
-        {
-            _userRepository = userRepository;
-        }
+        var mongoDatabase = mongoClient.GetDatabase(
+            TinderCloneDataBaseSettings.Value.DataBaseName);
 
-        public async Task<List<User>> GetAllAsync() => await _userRepository.GetAllAsync();
-
-        public async Task<User> GetByIdAsync(string id) => await _userRepository.GetByIdAsync(id);
-
-        public async Task CreateAsync(User user) => await _userRepository.CreateAsync(user);
-
-        public async Task UpdateAsync(string id, User userIn) => await _userRepository.UpdateAsync(id, userIn);
-
-        public async Task RemoveAsync(string id) => await _userRepository.RemoveAsync(id);
+        _Users = mongoDatabase.GetCollection<Users>(
+            TinderCloneDataBaseSettings.Value.UserCollectionName);
     }
+
+    public async Task<List<Book>> GetAsync() =>
+        await _booksCollection.Find(_ => true).ToListAsync();
+
+    public async Task<Book?> GetAsync(string id) =>
+        await _booksCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+
+    public async Task CreateAsync(Book newBook) =>
+        await _booksCollection.InsertOneAsync(newBook);
+
+    public async Task UpdateAsync(string id, Book updatedBook) =>
+        await _booksCollection.ReplaceOneAsync(x => x.Id == id, updatedBook);
+
+    public async Task RemoveAsync(string id) =>
+        await _booksCollection.DeleteOneAsync(x => x.Id == id);
 }
+
+
+/* https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-6.0&tabs=visual-studio */
