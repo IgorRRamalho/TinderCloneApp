@@ -6,14 +6,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        string connectionString = "mongodb+srv://igorrosa:<igor1010>@tinder-clone.eqgoimh.mongodb.net/?retryWrites=true&w=majority&appName=Tinder-Clone";
-        string databaseName = "Tinder-Clone";
+        string connectionString = "mongodb+srv://igorrosa:IGOR1010@tinder-clone.eqgoimh.mongodb.net/?retryWrites=true&w=majority&appName=Tinder-Clone";
+        string databaseName = "TinderCloneDB";
 
         MongoDBConnector connector = new MongoDBConnector(connectionString, databaseName);
 
         try
         {
-            var collection = connector.GetCollection<BsonDocument>("usuario");
+            var collection = connector.GetCollection<BsonDocument>("sers");
 
             // Recuperar todos os documentos na coleção "users"
             var documents = collection.Find(new BsonDocument()).ToList();
@@ -39,4 +39,5 @@ class Program
             Console.WriteLine($"Erro ao conectar ao MongoDB Atlas: {ex.Message}");
         }
     }
+
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TinderCloneBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d49d5364f267ffc71746a96c8a37ad61878fae5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8e9e10b247ad2c29f12513ff60e8b67ed8cb2aaf")]
 [assembly: System.Reflection.AssemblyProductAttribute("TinderCloneBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TinderCloneBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
