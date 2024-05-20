@@ -1,12 +1,8 @@
-import { useNavigate } from "react-router-dom"
 import logo from "../../assets/trademark.svg"
 import React from 'react';
 
 
 export default function SignUp(){
-
-    
-
     return(<>
         <div className="container">
             <div className="main_container">
