@@ -11,39 +11,39 @@ namespace TinderClone.Models
         public string? Id { get; set; }
 
         [BsonElement("email")]
-        public string Email { get; set; }
+        public string Email { get; set; } = null!;
 
         [BsonElement("name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
 
         [BsonElement("dateOfBirth")]
-        public int DateOfBirth { get; set; }
+        public int DateOfBirth { get; set; } 
 
         [BsonElement("gender")]
-        public string Gender { get; set; }
+        public string Gender { get; set; } = null!;
 
         [BsonElement("bio")]
-        public string Bio { get; set; }
+        public string Bio { get; set; } = null!;
 
         [BsonElement("photos")]
-        public List<string> Photos { get; set; }
+        public List<string> Photos { get; set; } = null!;
 
         [BsonElement("location")]
-        public GeoJsonPoint<GeoJson2DCoordinates> Location { get; set; }
+        public GeoJsonPoint<GeoJson2DCoordinates> Location { get; set; } = null!;
 
         [BsonElement("preferences")]
-        public Preferences Preferences { get; set; }
+        public Preferences Preferences { get; set; } = null!;
     }
 
     public class Preferences
     {
         [BsonElement("gender")]
-        public string Gender { get; set; }
+        public string Gender { get; set; } = null!;
 
         [BsonElement("ageRange")]
-        public List<int> AgeRange { get; set; }
+        public List<int> AgeRange { get; set; } = null!;
 
         [BsonElement("distance")]
-        public int Distance { get; set; }
+        public int Distance { get; set; } 
     }
 }

@@ -6,36 +6,68 @@ namespace TinderClone.Services;
 
 public class UserService
 {
-    private readonly IMongoCollection<User> _Users;
 
-    public UserService(
-        IOptions<TinderCloneDataBaseSettings> tinderCloneDataBaseSettings)
+    #region "Inicializa DataBase"
+    private readonly IMongoCollection<User> _Users;
+  
+    //Este é o construtor da classe UserService.
+    //Ele recebe as configurações do banco de dados como um parâmetro
+    //Ele usa essas configurações para conectar-se ao banco de dados e obter a coleção de usuários.
+    public UserService(IOptions<TinderCloneDataBaseSettings> tinderCloneDataBaseSettings)
     {
         var mongoClient = new MongoClient(
-            TinderCloneDataBaseSettings.Value.ConnectionString);
+            tinderCloneDataBaseSettings.Value.ConnectionString);
 
         var mongoDatabase = mongoClient.GetDatabase(
-            TinderCloneDataBaseSettings.Value.DataBaseName);
+            tinderCloneDataBaseSettings.Value.DataBaseName);
 
-        _Users = mongoDatabase.GetCollection<Users>(
-            TinderCloneDataBaseSettings.Value.UserCollectionName);
+        _Users = mongoDatabase.GetCollection<User>(
+            tinderCloneDataBaseSettings.Value.UserCollectionName);
     }
 
-    public async Task<List<Book>> GetAsync() =>
-        await _booksCollection.Find(_ => true).ToListAsync();
+    #endregion
 
-    public async Task<Book?> GetAsync(string id) =>
-        await _booksCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
-    public async Task CreateAsync(Book newBook) =>
-        await _booksCollection.InsertOneAsync(newBook);
+    #region "Métodos CRUD(Create, Read, Update, and Delete)"
 
-    public async Task UpdateAsync(string id, Book updatedBook) =>
-        await _booksCollection.ReplaceOneAsync(x => x.Id == id, updatedBook);
 
+    //Este método insere um novo usuário na coleção.(CREATE)
+    public async Task CreateAsync(User newUser) =>
+        await _Users.InsertOneAsync(newUser);
+
+
+
+    //Este método retorna todos os usuários no banco de dados.(READ)
+    //Ele usa a função Find para encontrar todos os documentos (neste caso, usuários) na coleção que satisfazem a condição fornecida.
+    //A condição _ => true significa que todos os documentos serão retornados.
+    public async Task<List<User>> GetAsync() =>
+        await _Users.Find(_ => true).ToListAsync();
+
+
+
+
+    //Este método retorna um único usuário com base em seu id.(READ)
+    //Ele usa a função Find para encontrar o primeiro documento na coleção que satisfaz a condição fornecida.
+    public async Task<User?> GetAsync(string id) =>
+        await _Users.Find(x => x.Id == id).FirstOrDefaultAsync();
+
+
+
+
+    //Este método atualiza um usuário existente na coleção.(UPDATE)
+    //Ele usa a função ReplaceOneAsync para substituir o documento que satisfaz a condição fornecida pelo novo usuário.
+    public async Task UpdateAsync(string id, User updateUser) =>
+        await _Users.ReplaceOneAsync(x => x.Id == id, updateUser);
+
+
+
+
+    //Este método remove um usuário da coleção com base em seu id.(DELETE)
     public async Task RemoveAsync(string id) =>
-        await _booksCollection.DeleteOneAsync(x => x.Id == id);
+        await _Users.DeleteOneAsync(x => x.Id == id);
+    #endregion
+    
+
 }
 
 
-/* https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-6.0&tabs=visual-studio */

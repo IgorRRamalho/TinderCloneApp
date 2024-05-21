@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TinderClone.Models
 {
-    internal class TinderCloneDataBaseSettings
+    public class TinderCloneDataBaseSettings
     {
         public string ConnectionString { get; set; } = null!;
 
