@@ -1,34 +1,25 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Carousel } from "primereact/carousel";
+import CarouselImages from "../../components/CarouselImages";
+import { Link } from 'react-router-dom';
 
-import SignUp from "../SignUpPage/SignUp";
-import girl2 from "../../assets/girl2.png";
 
 export default function Onboarding() {
   const navigate = useNavigate();
+
   const goToSignUpPage = () => {
     navigate("/SignUp");
   };
 
-  const productTemplate = () => {
-    return <div className="border-1 surface-border border-round m-2 text-center py-5 px-3"></div>;
-  };
+  const goToCreateAccountPage =() =>{
+    navigate("/CreateAccount")
+
+  }
 
   return (
     <>
       <div className="container">
-        <div className="card">
-          <Carousel
-            value={girl2}
-            numVisible={1}
-            numScroll={1}
-            className="custom-carousel"
-            circular
-            autoplayInterval={3000}
-            itemTemplate={productTemplate}
-          />
-        </div>
+        <CarouselImages/>
 
         <div className="content_text">
           <h1 className="title">Algorithm</h1>
@@ -50,8 +41,12 @@ export default function Onboarding() {
         </li>
       </ul>
 
-      <button className="create_account">Create an account</button>
+    <button className="create_account" onClick={goToCreateAccountPage}>Create an account</button>
 
+    <Link to = "/CreateAccount"></Link>
+
+      
+       
       <span>
         Already have an account?{" "}
         <button onClick={goToSignUpPage}>Sign In</button>
