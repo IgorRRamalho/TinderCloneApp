@@ -1,10 +1,12 @@
 ﻿using System.Dynamic;
 using TinderClone.Models;
+using TinderClone.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-var build = 
-
-// Add services to the container.
+// Adiciona serviços no container.
 builder.Services.Configure<TinderCloneDataBaseSettings>(
-    builder.Configuration.GetSection("TinderCloneDatabase"));
+    builder.Configuration.GetSection("TinderCloneDB"));
+
+builder.Services.AddSingleton<UserService>();

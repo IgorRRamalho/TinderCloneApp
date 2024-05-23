@@ -778,8 +778,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "MongoDB.Bson >= 2.25.0",
-      "MongoDB.Driver >= 2.25.0",
-      "MongoDB.Driver.Core >= 2.25.0"
+      "MongoDB.Driver >= 2.25.0"
     ]
   },
   "packageFolders": {
@@ -803,6 +802,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -833,10 +833,6 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.25.0, )"
-          },
-          "MongoDB.Driver.Core": {
-            "target": "Package",
-            "version": "[2.25.0, )"
           }
         },
         "imports": [
@@ -851,11 +847,14 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
