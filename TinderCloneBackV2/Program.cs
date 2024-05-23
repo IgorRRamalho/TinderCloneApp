@@ -1,24 +1,26 @@
-﻿using System.Dynamic;
-using TinderClone.Models;
+﻿using TinderClone.Models;
 using TinderClone.Services;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-// Adiciona serviços ao contêiner.
+// Add services to the container.
 builder.Services.AddControllers();
 
-// Adiciona suporte ao Swagger para documentação da API
+// Register configuration settings
+builder.Services.Configure<TinderCloneDataBaseSettings>(
+    builder.Configuration.GetSection("TinderCloneDB"));
+
+// Register UserService with the dependency injection container
+builder.Services.AddScoped<UserService>();
+
+// Add support for Swagger for API documentation
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configura o pipeline de requisições HTTP.
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();

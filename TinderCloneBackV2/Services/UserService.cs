@@ -15,14 +15,9 @@ public class UserService
     //Ele usa essas configurações para conectar-se ao banco de dados e obter a coleção de usuários.
     public UserService(IOptions<TinderCloneDataBaseSettings> tinderCloneDataBaseSettings)
     {
-        var mongoClient = new MongoClient(
-            tinderCloneDataBaseSettings.Value.ConnectionString);
-
-        var mongoDatabase = mongoClient.GetDatabase(
-            tinderCloneDataBaseSettings.Value.DataBaseName);
-
-        _Users = mongoDatabase.GetCollection<User>(
-            tinderCloneDataBaseSettings.Value.UserCollectionName);
+        var mongoClient = new MongoClient(tinderCloneDataBaseSettings.Value.ConnectionString);
+        var mongoDatabase = mongoClient.GetDatabase(tinderCloneDataBaseSettings.Value.DataBaseName);
+        _Users = mongoDatabase.GetCollection<User>(tinderCloneDataBaseSettings.Value.UserCollectionName);
     }
 
     #endregion

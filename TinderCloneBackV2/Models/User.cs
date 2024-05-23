@@ -16,8 +16,8 @@ namespace TinderClone.Models
         [BsonElement("name")]
         public string Name { get; set; } = null!;
 
-        [BsonElement("dateOfBirth")]
-        public int DateOfBirth { get; set; } 
+        [BsonElement("age")]
+        public int Age { get; set; } 
 
         [BsonElement("gender")]
         public string Gender { get; set; } = null!;
