@@ -1,44 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\models\\tinderclonedatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:models\\tinderclonedatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\tinderclonebackv2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:tinderclonebackv2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\tinderclonebackv2.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:tinderclonebackv2.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\tinderclonebackv2\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AA9030F1-473A-4D59-8FAF-8F2A0633CB32}|TinderCloneBackV2.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\IgorRosaRamalho\\Desktop\\github\\TinderCloneApp\\TinderCloneBackV2\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,123 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAowB4AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T23:39:28.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T23:58:52.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TinderCloneDataBaseSettings.cs",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Models\\TinderCloneDataBaseSettings.cs",
-              "RelativeDocumentMoniker": "Models\\TinderCloneDataBaseSettings.cs",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Models\\TinderCloneDataBaseSettings.cs",
-              "RelativeToolTip": "Models\\TinderCloneDataBaseSettings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T23:58:28.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TinderCloneBackV2.http",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\TinderCloneBackV2.http",
-              "RelativeDocumentMoniker": "TinderCloneBackV2.http",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\TinderCloneBackV2.http",
-              "RelativeToolTip": "TinderCloneBackV2.http",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-05-22T01:03:31.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-22T01:03:08.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T01:03:05.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-22T01:03:02.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T00:46:22.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TinderCloneBackV2.csproj",
-              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\TinderCloneBackV2.csproj",
-              "RelativeDocumentMoniker": "TinderCloneBackV2.csproj",
-              "ToolTip": "C:\\GitHub\\TinderCloneApp\\TinderCloneBackV2\\TinderCloneBackV2.csproj",
-              "RelativeToolTip": "TinderCloneBackV2.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-22T00:44:20.118Z",
-              "EditorCaption": ""
             }
           ]
         }
