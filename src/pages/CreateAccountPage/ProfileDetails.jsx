@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importar useNavigate
 import user from "../../assets/user.png";
 import "primeicons/primeicons.css";
 import CalendarModal from "../../components/CalendarModal";
@@ -8,12 +9,15 @@ export default function ProfileDetails() {
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
-    birthday: null, // Adicione um campo para a data de aniversário
+    birthday: null,
   });
+
+  const navigate = useNavigate(); // Instanciar o hook useNavigate
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("enviandooo", formData);
+    navigate("/gender"); // Navegar para a página de gênero
   };
 
   const handleInputChange = (e) => {
@@ -79,6 +83,8 @@ export default function ProfileDetails() {
             </span>
             <button type="button" onClick={openModal}>
               Choose birthday date
+
+              
             </button>
             {formData.birthday && <p>Selected Date: {formData.birthday.toLocaleDateString()}</p>}
           </div>
@@ -86,7 +92,7 @@ export default function ProfileDetails() {
           <button type="submit">Confirm</button>
         </form>
       </div>
-      
+
       <CalendarModal isOpen={isModalOpen} onRequestClose={closeModal} onSave={handleSaveDate} />
     </div>
   );
