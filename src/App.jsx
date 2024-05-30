@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Onboarding from "./pages/OnboargingPage/Onboarding.jsx";
 import SignUp from "./pages/SignUpPage/SignUp.jsx";
+import CreateAccount from "./pages/CreateAccountPage/CreateAccount.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Onboarding />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/CreateAccount" element={<CreateAccount />}/>
       </Routes>
     </BrowserRouter>
   );
