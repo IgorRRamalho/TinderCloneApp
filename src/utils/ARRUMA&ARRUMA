@@ -1,0 +1,23 @@
+- models/user.jsx
+   > integrar API criada 
+
+- services
+  > Crie um serviço para lidar com as chamadas de API relacionadas ao usuário:
+
+    // src/services/userService.js
+    import axios from 'axios';
+    import User from '../models/User';
+
+    const API = axios.create({ baseURL: 'https://api.example.com' });
+
+    export const fetchUserById = async (id) => {
+    const response = await API.get(`/users/${id}`);
+    return User.fromJson(response.data);
+    };
+
+    export const updateUser = async (user) => {
+    const response = await API.put(`/users/${user.id}`, user);
+    return User.fromJson(response.data);
+    };
+
+    // Outros métodos conforme necessário...
