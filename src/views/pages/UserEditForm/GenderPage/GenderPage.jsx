@@ -1,21 +1,30 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { SelectButton } from "primereact/selectbutton";
 import "primereact/resources/themes/saga-blue/theme.css"; // Selecione o tema adequado
 import "primereact/resources/primereact.min.css"; // CSS do PrimeReact
 import "primeicons/primeicons.css"; // Ícones do PrimeReact
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../../../contexts/UserContext";
 
 const GenderPage = () => {
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+  const [gender, setGender] = useState(user.gender || "");
+
+  const handleChange = (e) => {
+    setGender(e.value);
+    setUser({ ...user, gender: e.value });
+  };
+
+  const handleSubmit = () => {
+    navigate('/location');
+  };
+
   const options = [
     { label: "Woman", value: "woman" },
     { label: "Man", value: "man" },
     { label: "Choose another", value: "another" },
   ];
-  const [gender, setGender] = useState(options[0].value);
-
-  const handleChange = (e) => {
-    setGender(e.value);
-    console.log("Selected Gender:", e.value); // Log para verificar o gênero selecionado
-  };
 
   return (
     <>
@@ -30,6 +39,8 @@ const GenderPage = () => {
           optionValue="value"
         />
       </div>
+
+      <button onClick={handleSubmit}>Próximo</button>
     </>
   );
 };

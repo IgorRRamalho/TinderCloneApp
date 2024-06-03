@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "primeicons": "^7.0.0",
     "primereact": "^10.6.5",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
     "react-datepicker": "^6.9.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",

@@ -20,14 +20,6 @@ export default function Onboarding() {
     <>
       <div className="container">
         <CarouselImages/>
-
-        <div className="content_text">
-          <h1 className="title">Algorithm</h1>
-          <p className="text">
-            Users going through a vetting process to ensure you never match with
-            bots.
-          </p>
-        </div>
       </div>
       <ul className="options">
         <li>

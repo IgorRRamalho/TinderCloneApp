@@ -1,47 +1,25 @@
-class User {
-  constructor(
-    id,
-    username,
-    name,
-    age,
-    email,
-    gender,
-    bio,
-    photos,
-    location,
-    preferences,
-    profile_photo
-  ) {
-    this.id = id;
-    this.username = username;
-    this.name = name;
-    this.age = age;
-    this.email = email;
-    this.gender = gender;
-    this.bio = bio;
-    this.photos = photos; // Array de URLs de fotos
-    this.profile_photo = profile_photo; // URL da foto de perfil
-    this.location = location; // Localização como objeto {lat, lng}
-    this.preferences = preferences; // Preferências como objeto { genderPreference, ageRange, distance }
-  }
+const users = [];
 
+const addUser = (userData) => {
+  const user = {
+    id: userData.id,
+    firstName: userData.firstName,
+    lastName: userData.lastName,
+    age: userData.age,
+    email: userData.email,
+    gender: userData.gender,
+    bio: userData.bio,
+    photos: userData.photos, // Array de URLs de fotos
+    profile_photo: userData.profile_photo, // URL da foto de perfil
+    location: userData.location, // Localização como objeto {lat, lng}
+    preferences: userData.preferences, // Preferências como objeto { genderPreference, ageRange, distance }
+  };
+  users.push(user);
+  return user;
+};
 
-  //alterar para nossa API 
-  static fromJson(json) {
-    return new User(
-      json.id,
-      json.username,
-      json.name,
-      json.age,
-      json.email,
-      json.gender,
-      json.bio,
-      json.photos,
-      json.profilePhoto,
-      json.location,
-      json.preferences
-    );
-  }
-}
+const getUsers = () => {
+  return users;
+};
 
-export default User;
+export { addUser, getUsers };
