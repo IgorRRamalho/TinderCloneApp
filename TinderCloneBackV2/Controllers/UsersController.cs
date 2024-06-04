@@ -6,32 +6,12 @@ using System.Threading.Tasks;
 
 namespace TinderClone.Controllers
 {
-<<<<<<< HEAD
     [ApiController]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
-=======
-    private readonly UserService _usersService;
-
-    public UsersController(UserService usersService) =>
-        _usersService = usersService;
-
-
-
-    #region "Métodos CRUD API"
-
-    [HttpGet]
-    public async Task<List<User>> Get() =>
-        await _usersService.GetAsync();
-    
-
-    [HttpGet("{id:length(24)}")]
-    public async Task<ActionResult<User>> Get(string id)
->>>>>>> 3a5f1d5543c87bf81fd585f4191b6c28af2c27cc
     {
         private readonly UserService _usersService;
 
-<<<<<<< HEAD
         public UsersController(UserService usersService) =>
             _usersService = usersService;
 
@@ -42,11 +22,6 @@ namespace TinderClone.Controllers
         {
             var users = await _usersService.GetAsync();
             return Ok(users);
-=======
-        if (user is null)
-        { 
-            return NotFound();
->>>>>>> 3a5f1d5543c87bf81fd585f4191b6c28af2c27cc
         }
 
         [HttpGet("{id:length(24)}")]
