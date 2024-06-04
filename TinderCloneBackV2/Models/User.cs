@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver.GeoJsonObjectModel;
+using System.Collections.Generic;
 
 namespace TinderClone.Models
 {
@@ -17,7 +18,7 @@ namespace TinderClone.Models
         public string Name { get; set; } = null!;
 
         [BsonElement("age")]
-        public int Age { get; set; } 
+        public int Age { get; set; }
 
         [BsonElement("gender")]
         public string Gender { get; set; } = null!;
@@ -33,6 +34,10 @@ namespace TinderClone.Models
 
         [BsonElement("preferences")]
         public Preferences Preferences { get; set; } = null!;
+
+        [BsonElement("interests")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public List<string> Interests { get; set; } = null!;
     }
 
     public class Preferences
@@ -44,6 +49,6 @@ namespace TinderClone.Models
         public List<int> AgeRange { get; set; } = null!;
 
         [BsonElement("distance")]
-        public int Distance { get; set; } 
+        public int Distance { get; set; }
     }
 }
