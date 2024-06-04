@@ -9,7 +9,7 @@ public class UserService
 
     #region "Inicializa DataBase"
     private readonly IMongoCollection<User> _Users;
-  
+
     //Este é o construtor da classe UserService.
     //Ele recebe as configurações do banco de dados como um parâmetro
     //Ele usa essas configurações para conectar-se ao banco de dados e obter a coleção de usuários.
@@ -61,7 +61,7 @@ public class UserService
     public async Task RemoveAsync(string id) =>
         await _Users.DeleteOneAsync(x => x.Id == id);
     #endregion
-    
+
 
 }
 

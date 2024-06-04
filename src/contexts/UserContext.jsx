@@ -1,29 +1,28 @@
-import React, {createContext, useState} from "react";
+import React, { createContext, useState } from "react";
 
-
+// Criando o contexto
 const UserContext = createContext();
 
-const UserProvider = ({children}) => {
-    const [user, setUser] = useState({
-        firstName: '',
-        lastName: '',
-        age: '',
-        email: '',
-        gender: '',
-        bio: '',
-        photos: '',
-        profile_photo: '',
-        location: { lat: '', lng: '' },
-        preferences: { genderPreference: '', ageRange: '', distance: ''} ,
-        
+// Provedor do contexto
+const UserProvider = ({ children }) => {
+  const [user, setUser] = useState({
+    firstName: '',
+    lastName: '',
+    age: '',
+    email: '',
+    gender: '',
+    bio: '',
+    photos: [],
+    profile_photo: '',
+    location: { lat: '', lng: '' },
+    preferences: { genderPreference: '', ageRange: '', distance: '' },
+  });
 
-    });
-
-    return (
-        <UserContext.Provider value={{ user, setUser}}>
-            {children}
-        </UserContext.Provider>
-    );
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
 };
 
-export {UserContext, UserProvider};
+export { UserContext, UserProvider };

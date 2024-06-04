@@ -1,10 +1,15 @@
-import { addUser, getUsers } from '../models/userModel';
+import { addUser, getUsers } from "../services/Api";
 
-export const handleAddUser = (userData) => {
-  const newUser = addUser(userData);
-  return newUser;
-};
-
+export const handleAddUser = async (userData) => {
+    try {
+      const newUser = await addUser(userData);
+      return newUser;
+    } catch (error) {
+      console.error('Erro ao adicionar usuário:', error);
+      throw error;
+    }
+  };
+  
 export const handleGetUsers = () => {
   return getUsers();
 };

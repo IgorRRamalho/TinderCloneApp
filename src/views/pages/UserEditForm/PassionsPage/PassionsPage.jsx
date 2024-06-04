@@ -1,47 +1,31 @@
+// src/components/PassionsPage/PassionsPage.js
 import React, { useContext } from 'react';
 import { UserContext } from '../../../../contexts/UserContext';
 import { useNavigate } from 'react-router-dom';
+import { handleAddUser } from '../../../../controllers/userController';
 
-const PassionsPage = () =>{
-    const navigate = useNavigate();
-
-    //fazer map com os interesses, puxar do banco
-    /*
-    const { user, setUser } = useContext(UserContext);
+const PassionsPage = () => {
   const navigate = useNavigate();
+  const { user } = useContext(UserContext);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUser({
-      ...user,
-      preferences: {
-        ...user.preferences,
-        [name]: value,
-      },
-    });
-  };
-    */
-
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
-    // Aqui você pode enviar os dados para o backend
-    console.log('User data:', user);
-    navigate('/');
+    try {
+      await handleAddUser(user);
+      navigate("/main"); // Navegar para a página de sucesso ou próxima etapa
+    } catch (error) {
+      console.error("Erro ao adicionar usuário:", error);
+    }
   };
 
-
-    return(
-        <>
-        <h1>Your interests</h1>
-        <p>Select a few of your interests and let everyone know what you’re passionate about.</p>
-        <p>preferencias aqui ....</p>
-        <button onClick={handleClick}>Continue</button>
-
-
-        
-        </>
-    )
-
-}
+  return (
+    <>
+      <h1>Your interests</h1>
+      <p>Select a few of your interests and let everyone know what you’re passionate about.</p>
+      <p>Preferencias aqui ....</p>
+      <button onClick={handleClick}>Continue</button>
+    </>
+  );
+};
 
 export default PassionsPage;

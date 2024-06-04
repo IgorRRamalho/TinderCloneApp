@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../../../contexts/UserContext';
 import { useNavigate } from 'react-router-dom';
+import { addUser, getUsers } from '../../../../models/User';
 
 const PreferencesPage = () => {
   const { user, setUser } = useContext(UserContext);
@@ -21,7 +22,7 @@ const PreferencesPage = () => {
     e.preventDefault();
     // Aqui você pode enviar os dados para o backend
     console.log('User data:', user);
-    navigate('/');
+    navigate('/passions');
   };
 
   return (
