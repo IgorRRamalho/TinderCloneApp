@@ -1,0 +1,55 @@
+/* carouselStyles.css */
+
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 10px;
+}
+
+.carousel-image {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+  }
+
+.title{
+    font-weight: 700;
+    size: 24;
+
+    align-items: center;
+    color: #E94057;
+}
+
+.text{
+    font-weight: 400;
+}
+  
+  .carousel-item.active .carousel-image {
+    transform: scale(1.1); /* Aumenta a imagem central */
+  }
+  
+  .carousel-caption {
+    position: static;
+    padding-top: 100px;
+    color: #000;
+  }
+  .carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* Isso cria a forma de uma bolinha */
+    background-color: #000; /* Cor da bolinha */
+    border: none; /* Remove a borda */
+    margin-right: 5px; /* Espaçamento entre as bolinhas */
+    cursor: pointer; /* Cursor ao passar por cima */
+  }
+  
+  .carousel-indicators button {
+    color: #000; /* Cor das bolinhas */
+    border-radius: 50%; /* Faz com que os indicadores sejam bolinhas */
+    width: 12px; /* Tamanho das bolinhas */
+    height: 12px; /* Tamanho das bolinhas */
+    margin: 1px;
+  }
+  
+  

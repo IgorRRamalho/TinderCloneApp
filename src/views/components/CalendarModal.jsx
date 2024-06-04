@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-Modal.setAppElement('#root'); // Defina o elemento raiz para acessibilidade
+Modal.setAppElement("#root"); // Defina o elemento raiz para acessibilidade
 
 const CalendarModal = ({ isOpen, onRequestClose, onSave }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -31,7 +31,9 @@ const CalendarModal = ({ isOpen, onRequestClose, onSave }) => {
           onChange={handleDateChange}
           inline
         />
-        <button onClick={handleSave} className="close-button">Save</button>
+        <button onClick={handleSave} className="close-button">
+          Save
+        </button>
       </div>
     </Modal>
   );

@@ -11,8 +11,8 @@ export default function Onboarding() {
     navigate("/SignUp");
   };
 
-  const goToCreateAccountPage =() =>{
-    navigate("/CreateAccount")
+  const goToBasicInfo =() =>{
+    navigate("/basic-info")
 
   }
 
@@ -21,22 +21,10 @@ export default function Onboarding() {
       <div className="container">
         <CarouselImages/>
       </div>
-      <ul className="options">
-        <li>
-          <input type="radio" />
-        </li>
-        <li>
-          <input type="radio" />
-        </li>
-        <li>
-          <input type="radio" />
-        </li>
-      </ul>
 
-    <button className="create_account" onClick={goToCreateAccountPage}>Create an account</button>
+    <button className="create_account" onClick={goToBasicInfo}>Create an account</button>
 
-    <Link to = "/CreateAccount"></Link>
-
+   
       
        
       <span>
