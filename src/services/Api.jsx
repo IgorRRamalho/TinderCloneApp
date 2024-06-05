@@ -1,7 +1,7 @@
 // src/services/userService.js
 import axios from 'axios';
 
-const API_URL = 'https://localhost:44369/api/Users/';
+const API_URL = 'http://localhost:5122/api/Users/';
 
 // Função para obter usuários
 export const getUsers = async () => {
