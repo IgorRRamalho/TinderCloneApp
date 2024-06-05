@@ -8,7 +8,7 @@ export default function SignUp() {
     <>
       <div className="container">
         <div className="main_container">
-          <img src={logo} alt="Logo Trademark" />
+          <img className="logo" src={logo} alt="Logo Trademark" />
 
           <div className="main_content">
             <h2>Sign up to continue</h2>

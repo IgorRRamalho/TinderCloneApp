@@ -16,6 +16,7 @@ const UserProvider = ({ children }) => {
     profile_photo: '',
     location: { lat: '', lng: '' },
     preferences: { genderPreference: '', ageRange: '', distance: '' },
+    interests:[],
   });
 
   return (
