@@ -22,13 +22,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins",
-        builder =>
+        policyBuilder =>
         {
-            builder.SetIsOriginAllowed(_ => true)
-                   .AllowAnyHeader()
-                   .AllowAnyMethod();
+            policyBuilder.SetIsOriginAllowed(_ => true)
+                         .AllowAnyHeader()
+                         .AllowAnyMethod();
         });
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
