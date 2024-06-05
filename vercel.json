@@ -1,8 +1,5 @@
 {
     "build": {
-      "functions": {
-        "api/**/*": "api/*.js"
-      },
       "cmd": "concurrently \"dotnet run --project ./TinderCloneBackV2/TinderCloneBackV2.csproj\" \"vite\""
     }
   }
