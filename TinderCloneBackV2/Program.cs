@@ -44,7 +44,7 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 // Enable CORS with the specified policy
-app.UseCors("AllowLocalhost5173");
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 
