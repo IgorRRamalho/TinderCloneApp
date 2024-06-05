@@ -1,0 +1,5 @@
+{
+    "build": {
+      "cmd": "concurrently \"dotnet run --project ./TinderCloneBackV2/TinderCloneBackV2.csproj\" \"vite\""
+    }
+  }
