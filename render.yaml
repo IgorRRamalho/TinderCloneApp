@@ -1,6 +1,0 @@
-services:
-- type: web
-  name: tinder-clone-backend
-  env: linux
-  buildCommand: ./install_dotnet.sh && dotnet build TinderCloneBackV2/TinderCloneBackV2.csproj
-  startCommand: dotnet run --project TinderCloneBackV2/TinderCloneBackV2.csproj
