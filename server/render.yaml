@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: TinderCloneBack
+    env: dotnet
+    buildCommand: 
+      - dotnet restore
+    startCommand: 
+      - dotnet run
+    plan: free
+    region: oregon
+    branch: main
