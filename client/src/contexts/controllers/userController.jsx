@@ -1,4 +1,4 @@
-import { addUser, getUsers } from "../services/Api";
+import { addUser, getUsers } from "../../services/Api";
 
 export const handleAddUser = async (userData) => {
     try {
