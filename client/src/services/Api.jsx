@@ -25,4 +25,3 @@ export const addUser = async (userData) => {
   }
 };
 
-// Você pode adicionar mais funções conforme necessário, como atualizar, deletar usuários etc.

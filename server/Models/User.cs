@@ -1,6 +1,5 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Driver.GeoJsonObjectModel;
 using System.Collections.Generic;
 
 namespace TinderClone.Models
@@ -30,7 +29,7 @@ namespace TinderClone.Models
         public List<string> Photos { get; set; } = null!;
 
         [BsonElement("location")]
-        public GeoJsonPoint<GeoJson2DCoordinates> Location { get; set; } = null!;
+        public LocationCoordinates Location { get; set; } = null!;
 
         [BsonElement("preferences")]
         public Preferences Preferences { get; set; } = null!;
@@ -38,6 +37,15 @@ namespace TinderClone.Models
         [BsonElement("interests")]
         [BsonRepresentation(BsonType.ObjectId)]
         public List<string> Interests { get; set; } = null!;
+    }
+
+    public class LocationCoordinates
+    {
+        [BsonElement("type")]
+        public string Type { get; set; } = null!;
+
+        [BsonElement("coordinates")]
+        public List<double> Coordinates { get; set; } = null!;
     }
 
     public class Preferences
