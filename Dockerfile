@@ -3,8 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copiar csproj e restaurar dependências
-COPY server/*.csproj ./server/
-RUN dotnet restore ./server
+COPY server/TinderCloneBackV2.csproj ./server/
+RUN dotnet restore ./server/TinderCloneBackV2.csproj
 
 # Copiar todo o código e publicar a aplicação
 COPY server/. ./server/
