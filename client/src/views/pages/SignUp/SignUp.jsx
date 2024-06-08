@@ -1,9 +1,38 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/trademark.svg";
-import React from "react";
-
 import "./signUpStyles.css";
 
+/*
+========================================================================
+  Tela de Login - PRONTA✔
+  
+  Esta tela permite o usário logar
+
+  Autor: Igor Rosa e Giovanna
+  Data: 08 de Junho de 2024
+  Versão: 1.8
+========================================================================
+*/
+
 export default function SignUp() {
+  const [showEmailInput, setShowEmailInput] = useState(false);
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+
+  const handleContinueWithEmail = () => {
+    setShowEmailInput(true);
+  };
+
+  const goTomain = () => {
+    navigate("/");
+  };
+
+  const handleSendEmail = () => {
+    // Lógica para enviar o email aqui
+    console.log("Email sent:", email);
+  };
+
   return (
     <>
       <div className="container">
@@ -12,10 +41,36 @@ export default function SignUp() {
 
           <div className="main_content">
             <h2>Sign up to continue</h2>
-            <button>Continue with email</button>
+            <div className={`input_wrapper ${showEmailInput ? "active" : ""}`}>
+              {showEmailInput && (
+                <>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="input_email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <button
+                    onClick={handleSendEmail}
+                    className="button_send_email"
+                  >
+                    Login
+                  </button>
+                </>
+              )}
+            </div>
+            {!showEmailInput && (
+              <button
+                onClick={handleContinueWithEmail}
+                className="button_continue"
+              >
+                Continue with email
+              </button>
+            )}
           </div>
         </div>
-        <div className="footer">
+        <div className="footer" onClick={goTomain}>
           <a href="#">Terms of use</a>
           <a href="">Privacy Policy</a>
         </div>
