@@ -1,7 +1,24 @@
 import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
 import CarouselImages from "../../components/CarouselImages";
-import { Link } from 'react-router-dom';
+import "./Onboarding.css";
+
+/*
+========================================================================
+  Tela Inicial / Tela de Login - PRONTA✔
+  
+  Esta tela permite o usário ir para tela de cadastro ou para a
+  tela de login.
+  
+  Componentes utilizados:
+  - CarouselImages: Exibe o carrosel de imagens e legendas em conjunto
+  
+  Autor: Igor Rosa e Giovanna
+  Data: 08 de Junho de 2024
+  Versão: 2.7
+========================================================================
+*/
 
 export default function Onboarding() {
   const navigate = useNavigate();
@@ -10,33 +27,22 @@ export default function Onboarding() {
     navigate("/SignUp");
   };
 
-  const goToBasicInfo =() =>{
-    navigate("/basic-info")
-
-  }
-
-  const goToMainPage =() =>{
-    navigate("/main")
-
-  }
+  const goToBasicInfo = () => {
+    navigate("/basic-info");
+  };
 
   return (
     <>
-      <div className="container">
-        <CarouselImages/>
-      </div>
+      <CarouselImages />
+      <button className="create_account" onClick={goToBasicInfo}>
+        Create an account
+      </button>
 
-      <span>
-        <button onClick={goToMainPage}>TELA MAIN</button>
-      </span>
-    <button className="create_account" onClick={goToBasicInfo}>Create an account</button>
-
-   
-      
-       
-      <span>
+      <span className="sign_in">
         Already have an account?{" "}
-        <button onClick={goToSignUpPage}>Sign In</button>
+        <button onClick={goToSignUpPage} className="sign_in_button">
+          Sign In
+        </button>
       </span>
     </>
   );

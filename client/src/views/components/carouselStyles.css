@@ -1,55 +1,67 @@
-/* carouselStyles.css */
-
-.carouselContainer {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    margin: 10px;
+/* estiliza o container do carousel*/
+.carousel-container {
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
+/* remove o fundo padrão dos slides */
+.carousel .slide {
+  background: none;
+}
+
+/* estiliza as imagens dos slides*/
+.carousel .slide img {
+  border-radius: 15px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+}
+
+/* ajusta o padding dos slides */
+.carousel .slide {
+  padding: 0 10px;
+}
+
+/* estiliza a legenda dos slides*/
+.carousel .slide .legend {
+  position: relative;
+  margin-top: 5em;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+  border-radius: 10px;
+  background: #00000000;
+  color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+/* ajusta a imagem dentro da legenda */
 .carousel-image {
-    object-fit: cover;
-    transition: transform 0.5s ease;
-    border-radius: 10px;
-  }
-
-.title{
-    font-weight: 700;
-    size: 24;
-
-    align-items: center;
-    color: #E94057;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
 }
 
-.text{
-    font-weight: 400;
+/* estiliza o texto da legenda */
+.legend {
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+  position: relative;
 }
-  
-  .carousel-item.active .carousel-image {
-    transform: scale(1.1); /* Aumenta a imagem central */
-  }
-  
-  .carousel-caption {
-    position: static;
-    padding-top: 100px;
-    color: #000;
-  }
-  .carousel-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%; /* Isso cria a forma de uma bolinha */
-    background-color: #000; /* Cor da bolinha */
-    border: none; /* Remove a borda */
-    margin-right: 5px; /* Espaçamento entre as bolinhas */
-    cursor: pointer; /* Cursor ao passar por cima */
-  }
-  
-  .carousel-indicators button {
-    color: #000; /* Cor das bolinhas */
-    border-radius: 50%; /* Faz com que os indicadores sejam bolinhas */
-    width: 12px; /* Tamanho das bolinhas */
-    height: 12px; /* Tamanho das bolinhas */
-    margin: 1px;
-  }
-  
-  
+
+/* estiliza o título da legenda */
+.legend h3 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #ff4d4d;
+}
+
+/* estiliza o texto da legenda */
+.legend p {
+  font-size: 16px;
+  color: #6f6f6f;
+}

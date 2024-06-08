@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"dotnet run --project ../server/TinderCloneBackV2.csproj\" \"npx vite --port=4000\" \"lt --port 4000 --subdomain tinder-site\" \"lt --port 5122 --subdomain tinder-back\"", 
+    "dev": "concurrently \"dotnet run --project ../server/TinderCloneBackV2.csproj\" \"npx vite --port=4000\" \"lt --port 4000 --subdomain tinder-site\" \"lt --port 5122 --subdomain tinder-back\"",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -21,6 +21,7 @@
     "react-datepicker": "^6.9.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {

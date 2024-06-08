@@ -1,0 +1,38 @@
+.create_account {
+  display: block;
+  height: 56px;
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  background-color: #ff4d4d;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.create_account:hover {
+  background-color: #ff3333;
+}
+
+.sign_in {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6f6f6f;
+}
+
+.sign_in_button {
+  font-size: 14px;
+  color: #ff4d4d;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sign_in_button:hover {
+  text-decoration: underline;
+}
