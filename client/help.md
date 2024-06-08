@@ -1,4 +1,7 @@
+//179.177.9.203   PASSWORD
 
+Para acessar o front-end:https://tinder-site.loca.lt
+Para acessar o back-end: https://tinder-back.loca.lt/swagger
 
 1. **Configuração do MongoDB**: Primeiro, você precisa configurar o MongoDB e criar um banco de dados para o seu aplicativo. Você pode instalar o MongoDB localmente ou usar um serviço de hospedagem na nuvem, como MongoDB Atlas.
 

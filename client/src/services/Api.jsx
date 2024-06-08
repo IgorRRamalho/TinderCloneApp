@@ -1,7 +1,8 @@
 // src/services/userService.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5122/api/Users/';
+//const API_URL = 'http://localhost:5122/api/Users/';
+const API_URL = 'https://tinder-back.loca.lt/api/Users/';
 
 // Função para obter usuários
 export const getUsers = async () => {
