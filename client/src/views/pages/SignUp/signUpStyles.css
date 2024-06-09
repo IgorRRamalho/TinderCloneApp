@@ -64,7 +64,7 @@
   border: none;
 
   font-size: 16px;
-  font-weight: 700;
+
   line-height: 24px;
   color: #ffffff;
 }
@@ -156,6 +156,7 @@
   cursor: pointer;
   font-size: 16px;
   transition: opacity 0.3s ease;
+
 }
 
 .button_continue:hover,

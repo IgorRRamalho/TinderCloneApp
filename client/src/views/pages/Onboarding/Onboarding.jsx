@@ -1,7 +1,7 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
-import CarouselImages from "../../components/CarouselImages";
+import CarouselImages from "../../components/Carousel/CarouselImages";
 import "./Onboarding.css";
 
 /*

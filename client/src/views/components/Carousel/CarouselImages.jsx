@@ -1,9 +1,9 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "./carouselStyles.css"; // Importando os estilos personalizados
-import image1 from "../assets/algorithm-girl.png";
-import image2 from "../assets/matches-girl.png";
-import image3 from "../assets/premium-girl.png";
+import image1 from "../../assets/algorithm-girl.png";
+import image2 from "../../assets/matches-girl.png";
+import image3 from "../../assets/premium-girl.png";
 
 
 /*

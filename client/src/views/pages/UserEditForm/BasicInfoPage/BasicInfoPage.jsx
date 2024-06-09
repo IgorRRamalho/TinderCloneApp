@@ -2,10 +2,9 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import userImage from "../../../assets/user.png";
 import "primeicons/primeicons.css";
-import CalendarModal from "../../../components/CalendarModal";
+import CalendarModal from "../../../components/Calendar/CalendarModal";
 import { UserContext } from "../../../../contexts/UserContext";
-import "./BasicInfoPage.css"; // Assumindo que você vai criar um arquivo CSS para estilização
-import Calendar from 'react-calendar';
+import "./BasicInfoPage.css";
 
 const BasicInfoPage = () => {
   const { user, setUser } = useContext(UserContext);
@@ -40,8 +39,10 @@ const BasicInfoPage = () => {
 
   return (
     <div className="main">
-      <div className="skip">Skip</div>
-      <h1>Profile details</h1>
+      <div className="skip" onClick={() => navigate("/gender")}>
+        Skip
+      </div>
+      <h1 className="title">Profile details</h1>
       <div className="user_container">
         <div className="user_photo">
           <img src={userImage} alt="User" />
@@ -51,38 +52,42 @@ const BasicInfoPage = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="input_group">
+            <span className="span">First name</span>
             <input
               type="text"
               id="firstName"
               name="firstName"
               value={user.firstName || ""}
               onChange={handleChange}
-              placeholder="First name"
             />
           </div>
 
-          <div>
+          <div className="input_group">
+            <span className="span">Last name</span>
             <input
               type="text"
               id="lastName"
               name="lastName"
               value={user.lastName || ""}
               onChange={handleChange}
-              placeholder="Last name"
             />
           </div>
 
-          <div className="ChooseDate">
-            <button type="button" onClick={openModal}>
+          <div className="choose_date">
+            <button type="button" onClick={openModal} className="date_button">
               <i className="pi pi-calendar"></i> Choose birthday date
             </button>
             {user.age && (
-              <p>Selected Date: {user.age.toLocaleDateString()}</p>
+              <p className="selected_date">
+                Selected Date: {user.age.toLocaleDateString()}
+              </p>
             )}
           </div>
 
-          <button type="submit" className="confirm-button">Confirm</button>
+          <button type="submit" className="confirm_button">
+            Confirm
+          </button>
         </form>
       </div>
 

@@ -57,11 +57,11 @@
 .legend h3 {
   margin: 10px 0;
   font-size: 24px;
-  color: #ff4d4d;
+  color: #FF4B5C;
 }
 
 /* estiliza o texto da legenda */
 .legend p {
   font-size: 16px;
-  color: #6f6f6f;
+  color: #666;
 }

@@ -4,30 +4,29 @@
   width: calc(100% - 40px);
   margin: 20px auto;
   padding: 15px;
-  font-size: 18px;
-  color: white;
-  background-color: #ff4d4d;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
   text-align: center;
+  background-color: #FF4B5C;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  width: 295px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px #00000032;
 }
 
-.create_account:hover {
-  background-color: #ff3333;
-}
 
 .sign_in {
   display: block;
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
-  color: #6f6f6f;
+  color: #666;
 }
 
 .sign_in_button {
   font-size: 14px;
-  color: #ff4d4d;
+  color: #FF4B5C;
   background: none;
   border: none;
   cursor: pointer;
