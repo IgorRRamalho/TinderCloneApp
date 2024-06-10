@@ -11,7 +11,7 @@ import SignUp from "./views/pages/SignUp/SignUp";
 import Onboarding from "./views/pages/Onboarding/Onboarding";
 import LocationPage from "./views/pages/UserEditForm/LocationPage/LocationPage";
 import PreferencesPage from "./views/pages/UserEditForm/PreferencesPage/PreferencesPage";
-import PassionsPage from "./views/pages/UserEditForm/PassionsPage/PassionsPage";
+import InterestsPage from "./views/pages/UserEditForm/PassionsPage/InterestsPage";
 import MainPage from "./views/pages/UserProfile/MainPage/MainPage";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/gender" element={<GenderPage/>}/>
         <Route path="/location" element={<LocationPage/>}/>
         <Route path="/preferences" element={<PreferencesPage/>}/>
-        <Route path="/passions" element={<PassionsPage/>}/>
+        <Route path="/interests" element={<InterestsPage/>}/>
         <Route path="/main" element={<MainPage/>}/>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,65 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.nav_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_buttons .back-btn, .nav_buttons .skip-btn {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.passions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.passion-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.passion-button.selected {
+  background-color: #ff5a5f;
+  color: #fff;
+}
+
+.continue-button {
+  background-color: #ff5a5f;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.continue-button:hover {
+  background-color: #e04e50;
+}
+
+.continue-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

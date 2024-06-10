@@ -84,9 +84,9 @@ const LocationPage = () => {
   };
 
   return (
-    <div className="location-page">
+    <div className="container-page">
       <div className="nav_buttons">
-        <span className="back-btn" onClick={() => navigate("/basic-info")}>
+        <span className="back-btn" onClick={() => navigate("/gender")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -101,7 +101,7 @@ const LocationPage = () => {
             />
           </svg>
         </span>
-        <span className="skip-btn" onClick={() => navigate("/location")}>
+        <span className="skip-btn" onClick={() => navigate("/preferences")}>
           Skip
         </span>
       </div>
