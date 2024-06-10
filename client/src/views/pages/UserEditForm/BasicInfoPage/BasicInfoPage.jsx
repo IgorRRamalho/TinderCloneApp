@@ -75,19 +75,15 @@ const BasicInfoPage = () => {
           </div>
 
           <div className="choose_date">
-            <button type="button" onClick={openModal} className="date_button">
+            <button type="button" className="date_button" onClick={openModal}>
               <i className="pi pi-calendar"></i> Choose birthday date
             </button>
             {user.age && (
-              <p className="selected_date">
-                Selected Date: {user.age.toLocaleDateString()}
-              </p>
+              <p className="selected_date">Selected Date: {user.age.toLocaleDateString()}</p>
             )}
           </div>
 
-          <button type="submit" className="confirm_button">
-            Confirm
-          </button>
+          <button type="submit" className="confirm_button">Confirm</button>
         </form>
       </div>
 
