@@ -25,7 +25,7 @@ const MainPage = () => {
   return (
     <div className="discover-page">
       <div className="nav_buttons">
-        <span className="back-btn" onClick={() => navigate("/previous-page")}>
+        <span className="back-btn" onClick={() => navigate("/interests")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"

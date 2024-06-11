@@ -3,7 +3,7 @@ import { UserContext } from "../../../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import Slider from "@mui/material/Slider";
 import Box from "@mui/material/Box";
-import "./Preferences.css"
+import "./Preferences.css";
 
 const PreferencesPage = () => {
   const { user, setUser } = useContext(UserContext);
@@ -65,16 +65,74 @@ const PreferencesPage = () => {
       <h2>Your Preferences</h2>
 
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="label_preferences">
           Gender Attraction:
-          <select value={genderAttraction} onChange={handleChangeGender} name="genderAttraction">
-            <option value="man">Man</option>
-            <option value="woman">Woman</option>
-            <option value="other">Other</option>
-          </select>
+          <div className="select-container">
+            <label>
+              <input
+                type="radio"
+                className="gender"
+                value="Male"
+                checked={genderAttraction === "Male"}
+                onChange={handleChangeGender}
+              />
+              Male
+            </label>
+            <label>
+              <input
+                type="radio"
+                className="gender"
+                value="Female"
+                checked={genderAttraction === "Female"}
+                onChange={handleChangeGender}
+              />
+              Female
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="Both"
+                className="gender"
+                checked={genderAttraction === "Both"}
+                onChange={handleChangeGender}
+              />
+              Both 
+            </label>
+          </div>
+          {genderAttraction === "Other" && (
+            <div className="extra-gender-options">
+              <label>
+                <input
+                  type="radio"
+                  value="Non-binary"
+                  checked={genderAttraction === "Non-binary"}
+                  onChange={handleChangeGender}
+                />
+                Non-binary
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="Genderqueer"
+                  checked={genderAttraction === "Genderqueer"}
+                  onChange={handleChangeGender}
+                />
+                Genderqueer
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="Agender"
+                  checked={genderAttraction === "Agender"}
+                  onChange={handleChangeGender}
+                />
+                Agender
+              </label>
+            </div>
+          )}
         </label>
-        
-        <label>
+
+        <label className="label_preferences">
           Age Range:
           <Box sx={{ width: 295 }}>
             <Slider
@@ -88,7 +146,7 @@ const PreferencesPage = () => {
           </Box>
         </label>
 
-        <label>
+        <label className="label_preferences">
           Maximum Distance (km):
           <Box sx={{ width: 295 }}>
             <Slider

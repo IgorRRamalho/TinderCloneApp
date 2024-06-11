@@ -1,8 +1,27 @@
-
 p {
   font-size: 16px;
   margin-bottom: 20px;
 }
+
+.container-page .label_preferences {
+  display: flex;
+  flex-direction: column;
+ 
+  margin: 10px 0px;
+
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+}
+ 
+
+.label_preferences input[type="radio"]:checked + label {
+  background-color: #ff4c61;
+  color: #e8e6ea;
+}
+
 
 .passions-grid {
   display: flex;
@@ -25,4 +44,3 @@ p {
   background-color: #ff5a5f;
   color: #fff;
 }
-
