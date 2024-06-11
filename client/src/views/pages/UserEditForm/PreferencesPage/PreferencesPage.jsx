@@ -3,6 +3,7 @@ import { UserContext } from "../../../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import Slider from "@mui/material/Slider";
 import Box from "@mui/material/Box";
+import "./Preferences.css"
 
 const PreferencesPage = () => {
   const { user, setUser } = useContext(UserContext);
@@ -82,7 +83,7 @@ const PreferencesPage = () => {
               valueLabelDisplay="auto"
               min={18}
               max={100}
-              color="secondary"
+              color="ff5a5f"
             />
           </Box>
         </label>
@@ -96,7 +97,7 @@ const PreferencesPage = () => {
               valueLabelDisplay="auto"
               min={1}
               max={500}
-              color="secondary"
+              color="ff5a5f"
             />
           </Box>
         </label>

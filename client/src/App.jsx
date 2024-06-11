@@ -14,6 +14,8 @@ import PreferencesPage from "./views/pages/UserEditForm/PreferencesPage/Preferen
 import InterestsPage from "./views/pages/UserEditForm/PassionsPage/InterestsPage";
 import MainPage from "./views/pages/UserProfile/MainPage/MainPage";
 
+import MatchPage from "./views/pages/UserProfile/MatchPage/MatchPage";
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -28,6 +30,7 @@ function App() {
         <Route path="/preferences" element={<PreferencesPage/>}/>
         <Route path="/interests" element={<InterestsPage/>}/>
         <Route path="/main" element={<MainPage/>}/>
+        <Route path="/match" element={<MainPage/>}/>
       </Routes>
     </BrowserRouter>
   );

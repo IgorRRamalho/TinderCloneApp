@@ -6,17 +6,17 @@ const UserContext = createContext();
 // Provedor do contexto
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
-    firstName: '',
-    lastName: '',
-    age: '',
-    email: '',
-    gender: '',
-    bio: '',
+    firstName: "",
+    lastName: "",
+    age: "",
+    email: "",
+    gender: "",
+    bio: "",
     photos: [],
-    profile_photo: '',
-    location: { lat: '', lng: '' },
-    preferences: { genderPreference: '', ageRange: '', distance: '' },
-    interests:[],
+    profile_photo: "",
+    location: { pais: "Brasil", cep: "", cidade: "", uf: "" },
+    preferences: { genderAttraction: "", ageRange: "", maxDistance: "" },
+    interests: [],
   });
 
   return (

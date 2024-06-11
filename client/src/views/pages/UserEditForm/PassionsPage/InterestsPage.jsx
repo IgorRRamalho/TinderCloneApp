@@ -47,13 +47,20 @@ const InterestsPage = () => {
     });
 
     try {
-      await handleAddUser(user);
+      const updatedUser = {
+        ...user,
+        preferences: {
+          ...user.preferences,
+          passions: selectedPassions,
+        },
+      };
+
+      await handleAddUser(updatedUser);
       navigate("/main"); // Navegar para a página de sucesso ou próxima etapa
     } catch (error) {
       console.error("Erro ao adicionar usuário:", error);
     }
   };
-
   return (
     <div className="container-page">
       <div className="nav_buttons">
@@ -77,11 +84,10 @@ const InterestsPage = () => {
         </span>
       </div>
 
-      <div>
+      <div className="content_text">
         <h2>Your interests</h2>
         <p>
-          Select a few of your interests and let everyone know what you’re
-          passionate about.
+        Select a few of your interests and let everyone know what you’re passionate about.
         </p>
       </div>
 
