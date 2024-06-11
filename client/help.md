@@ -1,4 +1,6 @@
-//179.177.9.203   PASSWORD
+//179.177.9.203   PASSWORD PC IGOR
+177.79.31.108 NOTEBOOK IGOR
+
 
 Para acessar o front-end:https://tinder-site.loca.lt
 Para acessar o back-end: https://tinder-back.loca.lt/swagger
