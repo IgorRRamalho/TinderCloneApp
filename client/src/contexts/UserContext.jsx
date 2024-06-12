@@ -11,7 +11,7 @@ const UserProvider = ({ children }) => {
     age: "",
     gender: "",
     photos: [],
-    profile_photo: "",
+    profilePhoto: "",
     interests: [],
   });
 
@@ -23,3 +23,4 @@ const UserProvider = ({ children }) => {
 };
 
 export { UserContext, UserProvider };
+

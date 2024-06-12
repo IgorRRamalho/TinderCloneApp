@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import  React, { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import { handleAddUser } from "../../../../contexts/controllers/userController";
@@ -39,7 +39,7 @@ const InterestsPage = () => {
         ...user,
         interests: selectedInterests,
       };
-
+      console.log(updatedUser)
       await handleAddUser(updatedUser);
       navigate("/main"); // Navegar para a página de sucesso ou próxima etapa
     } catch (error) {

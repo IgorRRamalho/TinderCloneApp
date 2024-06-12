@@ -38,11 +38,17 @@ namespace TinderClone.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(User newUser)
+        public async Task<IActionResult> Post([FromBody] User newUser)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             await _usersService.CreateAsync(newUser);
             return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
         }
+
 
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, User updateUser)
