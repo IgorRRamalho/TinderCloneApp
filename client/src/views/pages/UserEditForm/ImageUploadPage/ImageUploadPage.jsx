@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../../../../contexts/UserContext';
 import { useNavigate } from 'react-router-dom';
+import { UploadButton } from "@bytescale/upload-widget-react";
 import './ImageUploadPage.css';
 
 const ImageUploadPage = () => {
@@ -14,6 +15,11 @@ const ImageUploadPage = () => {
     setImages([...images, ...newImages]);
   };
 
+  const handleUploadComplete = (files) => {
+    const newImages = files.map(file => file.fileUrl);
+    setImages([...images, ...newImages]);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setUser({
@@ -22,6 +28,11 @@ const ImageUploadPage = () => {
     });
     console.log("User data:", user);
     navigate("/main");
+  };
+
+  const uploadOptions = {
+    apiKey: "public_12a1yzf6raU4ee2CH84o9UJQfk7H", // Your API key.
+    maxFileCount: 1
   };
 
   return (
@@ -34,6 +45,13 @@ const ImageUploadPage = () => {
             <img key={index} src={image} alt={`Upload Preview ${index}`} />
           ))}
         </div>
+        <UploadButton options={uploadOptions} onComplete={handleUploadComplete}>
+          {({ onClick }) => (
+            <button type="button" onClick={onClick}>
+              Upload a file...
+            </button>
+          )}
+        </UploadButton>
         <button className="confirm_button" type="submit">Upload</button>
       </form>
     </div>
