@@ -1,38 +1,29 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import { handleAddUser } from "../../../../contexts/controllers/userController";
 import "./InterestsPage.css";
 
-const passions = [
-  "Photography",
-  "Shopping",
-  "Karaoke",
-  "Yoga",
-  "Cooking",
-  "Tennis",
-  "Run",
-  "Swimming",
-  "Art",
-  "Traveling",
-  "Extreme",
-  "Music",
-  "Drink",
-  "Video games",
-];
+// Aqui você pode importar o JSON diretamente ou copiar e colar os dados.
+import interestsData from "./TinderCloneDB.Interests.json";
 
 const InterestsPage = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
-  const [selectedPassions, setSelectedPassions] = useState(
-    user.preferences.passions || []
+  const [selectedInterests, setSelectedInterests] = useState(
+    user.preferences?.passions || []
   );
 
-  const handlePassionClick = (passion) => {
-    if (selectedPassions.includes(passion)) {
-      setSelectedPassions(selectedPassions.filter((p) => p !== passion));
-    } else if (selectedPassions.length < 5) {
-      setSelectedPassions([...selectedPassions, passion]);
+  useEffect(() => {
+    // Atualizar interesses selecionados ao carregar a página, se houver dados do usuário
+    setSelectedInterests(user.preferences?.passions || []);
+  }, [user.preferences]);
+
+  const handleInterestClick = (interest) => {
+    if (selectedInterests.includes(interest)) {
+      setSelectedInterests(selectedInterests.filter((i) => i !== interest));
+    } else if (selectedInterests.length < 5) {
+      setSelectedInterests([...selectedInterests, interest]);
     }
   };
 
@@ -42,7 +33,7 @@ const InterestsPage = () => {
       ...user,
       preferences: {
         ...user.preferences,
-        passions: selectedPassions,
+        passions: selectedInterests,
       },
     });
 
@@ -51,7 +42,7 @@ const InterestsPage = () => {
         ...user,
         preferences: {
           ...user.preferences,
-          passions: selectedPassions,
+          passions: selectedInterests,
         },
       };
 
@@ -61,10 +52,11 @@ const InterestsPage = () => {
       console.error("Erro ao adicionar usuário:", error);
     }
   };
-  return (
+  
+  return (  
     <div className="container-page">
       <div className="nav_buttons">
-        <span className="back-btn" onClick={() => navigate("/preferences")}>
+        <span className="back-btn" onClick={() => navigate("/gender")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -80,7 +72,7 @@ const InterestsPage = () => {
           </svg>
         </span>
         <span className="skip-btn" onClick={() => navigate("/main")}>
-          Skip
+        
         </span>
       </div>
 
@@ -92,24 +84,24 @@ const InterestsPage = () => {
       </div>
 
       <div className="passions-grid">
-        {passions.map((passion) => (
+        {interestsData.map((interest) => (
           <button
-            key={passion}
+            key={interest._id.$oid}
             className={`passion-button ${
-              selectedPassions.includes(passion) ? "selected" : ""
+              selectedInterests.includes(interest.name) ? "selected" : ""
             }`}
-            onClick={() => handlePassionClick(passion)}
+            onClick={() => handleInterestClick(interest.name)}
           >
-            {passion}
+            {interest.name}
           </button>
         ))}
       </div>
-      <p>{`You have selected ${selectedPassions.length} interest(s)`}</p>
+      <p>{`You have selected ${selectedInterests.length} interest(s)`}</p>
 
       <button
         className="confirm_button"
         onClick={handleClick}
-        disabled={selectedPassions.length !== 5}
+        disabled={selectedInterests.length !== 5}
       >
         Continue
       </button>

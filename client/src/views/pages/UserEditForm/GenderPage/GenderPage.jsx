@@ -21,7 +21,7 @@ const GenderPage = () => {
     }
   };
   const handleSubmit = () => {
-    navigate("/location");
+    navigate("/interests");
   };
 
   return (

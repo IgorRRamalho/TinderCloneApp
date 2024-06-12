@@ -6,8 +6,6 @@ import BasicInfoPage from "./views/pages/UserEditForm/BasicInfoPage/BasicInfoPag
 import GenderPage from "./views/pages/UserEditForm/GenderPage/GenderPage";
 import SignUp from "./views/pages/SignUp/SignUp";
 import Onboarding from "./views/pages/Onboarding/Onboarding";
-import LocationPage from "./views/pages/UserEditForm/LocationPage/LocationPage";
-import PreferencesPage from "./views/pages/UserEditForm/PreferencesPage/PreferencesPage";
 import InterestsPage from "./views/pages/UserEditForm/PassionsPage/InterestsPage";
 import MainPage from "./views/pages/UserProfile/MainPage/MainPage";
 import MatchPage from "./views/pages/UserProfile/MatchPage/MatchPage";
@@ -23,8 +21,6 @@ function App() {
           <Route path="/SignUp" element={<SignUp />}/>
           <Route path="/basic-info" element={<BasicInfoPage />}/>
           <Route path="/gender" element={<GenderPage/>}/>
-          <Route path="/location" element={<LocationPage/>}/>
-          <Route path="/preferences" element={<PreferencesPage/>}/>
           <Route path="/interests" element={<InterestsPage/>}/>
           <Route path="/main" element={<MainPage/>}/>
           <Route path="/match" element={<MainPage/>}/>

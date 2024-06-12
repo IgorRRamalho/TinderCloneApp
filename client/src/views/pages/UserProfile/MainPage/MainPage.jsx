@@ -58,11 +58,9 @@ const MainPage = () => {
 
       {users.length > 0 ? (
         <div className="profile-card">
-          <img src={users[0].profile_photo} alt={users[0].name} />
+          <img src={foto} alt={users[0].name} />
           <div className="profile-info">
             <h3>{users[0].firstName} {users[0].lastName}, {users[0].age}</h3>
-            <p>{users[0].bio}</p>
-            <span>{users[0].location.city}, {users[0].location.uf}</span>
           </div>
         </div>
       ) : (

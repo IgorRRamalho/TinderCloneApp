@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ab5"
+  },
+  "name": "Karaoke",
+  "icon": "🎤"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ab7"
+  },
+  "name": "Cooking",
+  "icon": "🍳"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9abf"
+  },
+  "name": "Drink",
+  "icon": "🍸"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ab8"
+  },
+  "name": "Tennis",
+  "icon": "🎾"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9abc"
+  },
+  "name": "Traveling",
+  "icon": "✈️"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ac0"
+  },
+  "name": "Video games",
+  "icon": "🎮"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ab3"
+  },
+  "name": "Photography",
+  "icon": "📷"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ab4"
+  },
+  "name": "Shopping",
+  "icon": "🛍️"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ab6"
+  },
+  "name": "Yoga",
+  "icon": "🧘"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9ab9"
+  },
+  "name": "Run",
+  "icon": "🏃"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9abb"
+  },
+  "name": "Art",
+  "icon": "🎨"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9aba"
+  },
+  "name": "Swimming",
+  "icon": "🏊"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9abd"
+  },
+  "name": "Extreme",
+  "icon": "⛷️"
+},
+{
+  "_id": {
+    "$oid": "665e5330c047a91593ed9abe"
+  },
+  "name": "Music",
+  "icon": "🎵"
+}]

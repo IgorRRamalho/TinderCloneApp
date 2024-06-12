@@ -9,10 +9,8 @@ const addUser = (userData) => {
     age: userData.age,
     email: userData.email,
     gender: userData.gender,
-    bio: userData.bio,
     photos: userData.photos, // Array de URLs de fotos
     profile_photo: userData.profile_photo, // URL da foto de perfil
-    location: userData.location, // Localização como objeto { lat, lng }
     interests: userData.interests, // Preferências como objeto { genderPreference, ageRange, distance }
   };
   users.push(user);

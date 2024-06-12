@@ -2,7 +2,8 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import userImage from "../../../assets/user.png";
 import "primeicons/primeicons.css";
-import CalendarModal from "../../../components/Calendar/CalendarModal";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { UserContext } from "../../../../contexts/UserContext";
 import "./BasicInfoPage.css";
 
@@ -10,31 +11,48 @@ const BasicInfoPage = () => {
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [startDate, setStartDate] = useState(
+    user.age ? new Date(user.age) : null
+  );
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
 
+  const calculateAge = (birthdate) => {
+    const today = new Date();
+    const birthDate = new Date(birthdate);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && today.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+    return age;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (startDate) {
+      const age = calculateAge(startDate);
+      setUser((prevData) => ({
+        ...prevData,
+        age: age,
+      }));
+    }
     navigate("/gender");
   };
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   const handleSaveDate = (date) => {
+    setStartDate(date);
     setUser((prevData) => ({
       ...prevData,
       age: date,
     }));
-    closeModal();
+    setIsModalOpen(false);
   };
 
   return (
@@ -75,23 +93,19 @@ const BasicInfoPage = () => {
           </div>
 
           <div className="choose_date">
-            <button type="button" className="date_button" onClick={openModal}>
-              <i className="pi pi-calendar"></i> Choose birthday date
-            </button>
-            {user.age && (
-              <p className="selected_date">Selected Date: {user.age.toLocaleDateString()}</p>
-            )}
+            <DatePicker
+              selected={startDate}
+              onChange={handleSaveDate}
+              className="date_picker_input"
+              placeholderText="Choose birthday date"
+            />
           </div>
 
-          <button type="submit" className="confirm_button">Confirm</button>
+          <button type="submit" className="confirm_button">
+            Confirm
+          </button>
         </form>
       </div>
-
-      <CalendarModal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        onSave={handleSaveDate}
-      />
     </div>
   );
 };

@@ -11,11 +11,8 @@ const UserProvider = ({ children }) => {
     age: "",
     email: "",
     gender: "",
-    bio: "",
     photos: [],
     profile_photo: "",
-    location: { pais: "Brasil", cep: "", cidade: "", uf: "" },
-    preferences: { genderAttraction: "", ageRange: "", maxDistance: "" },
     interests: [],
   });
 
