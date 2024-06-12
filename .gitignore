@@ -18,3 +18,4 @@ server/.vs/ProjectEvaluation/tinderclonebackv2.projects.v8.bin
 server/.vs/TinderCloneBackV2/DesignTimeBuild/.dtbcache.v2
 server/.vs/TinderCloneBackV2/v17/.suo
 
+server/obj/Debug/net8.0/TinderCloneBackV2.GeneratedMSBuildEditorConfig.editorconfig

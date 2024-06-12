@@ -1,13 +1,19 @@
 {
 	"folders": [
 		{
+			"name": "client",
 			"path": "client"
 		},
 		{
+			"name": "server",
 			"path": "server"
 		},
 		{
+			"name": "src",
 			"path": "client/src"
+		},
+		{
+			"path": "client/src/views/pages"
 		}
 	],
 	"settings": {

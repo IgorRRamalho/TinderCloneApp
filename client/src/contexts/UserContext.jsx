@@ -6,10 +6,9 @@ const UserContext = createContext();
 // Provedor do contexto
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState({
-    firstName: "",
-    lastName: "",
-    age: "",
     email: "",
+    name: "",
+    age: "",
     gender: "",
     photos: [],
     profile_photo: "",

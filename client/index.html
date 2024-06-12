@@ -17,10 +17,31 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tinder Clone</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        user-select: none; /* Impede a seleção de texto */
+        -webkit-user-select: none; /* Impede a seleção de texto */
+        -moz-user-select: none; /* Impede a seleção de texto */
+        -ms-user-select: none; /* Impede a seleção de texto */
+      }
+      
+      #root {
+        width: 430px;
+        height: 932px;
+        overflow: hidden;
+      }
+
+      input[type="text"] {
+        user-select: text; /* Permite a seleção de texto apenas em campos de entrada de texto */
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-

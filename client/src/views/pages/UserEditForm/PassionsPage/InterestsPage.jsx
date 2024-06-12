@@ -1,29 +1,29 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import { handleAddUser } from "../../../../contexts/controllers/userController";
 import "./InterestsPage.css";
 
-// Aqui você pode importar o JSON diretamente ou copiar e colar os dados.
+// Supondo que você ainda tenha acesso aos dados de interesse, mesmo que importados de um JSON
 import interestsData from "./TinderCloneDB.Interests.json";
 
 const InterestsPage = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
   const [selectedInterests, setSelectedInterests] = useState(
-    user.preferences?.passions || []
+    user.interests || []
   );
 
   useEffect(() => {
     // Atualizar interesses selecionados ao carregar a página, se houver dados do usuário
-    setSelectedInterests(user.preferences?.passions || []);
-  }, [user.preferences]);
+    setSelectedInterests(user.interests || []);
+  }, [user]);
 
-  const handleInterestClick = (interest) => {
-    if (selectedInterests.includes(interest)) {
-      setSelectedInterests(selectedInterests.filter((i) => i !== interest));
+  const handleInterestClick = (interestId) => {
+    if (selectedInterests.includes(interestId)) {
+      setSelectedInterests(selectedInterests.filter((id) => id !== interestId));
     } else if (selectedInterests.length < 5) {
-      setSelectedInterests([...selectedInterests, interest]);
+      setSelectedInterests([...selectedInterests, interestId]);
     }
   };
 
@@ -31,19 +31,13 @@ const InterestsPage = () => {
     e.preventDefault();
     setUser({
       ...user,
-      preferences: {
-        ...user.preferences,
-        passions: selectedInterests,
-      },
+      interests: selectedInterests,
     });
 
     try {
       const updatedUser = {
         ...user,
-        preferences: {
-          ...user.preferences,
-          passions: selectedInterests,
-        },
+        interests: selectedInterests,
       };
 
       await handleAddUser(updatedUser);
@@ -52,8 +46,8 @@ const InterestsPage = () => {
       console.error("Erro ao adicionar usuário:", error);
     }
   };
-  
-  return (  
+
+  return (
     <div className="container-page">
       <div className="nav_buttons">
         <span className="back-btn" onClick={() => navigate("/gender")}>
@@ -71,15 +65,14 @@ const InterestsPage = () => {
             />
           </svg>
         </span>
-        <span className="skip-btn" onClick={() => navigate("/main")}>
-        
-        </span>
+        <span className="skip-btn" onClick={() => navigate("/main")}></span>
       </div>
 
       <div className="content_text">
         <h2>Your interests</h2>
         <p>
-        Select a few of your interests and let everyone know what you’re passionate about.
+          Select a few of your interests and let everyone know what you’re
+          passionate about.
         </p>
       </div>
 
@@ -88,9 +81,9 @@ const InterestsPage = () => {
           <button
             key={interest._id.$oid}
             className={`passion-button ${
-              selectedInterests.includes(interest.name) ? "selected" : ""
+              selectedInterests.includes(interest._id.$oid) ? "selected" : ""
             }`}
-            onClick={() => handleInterestClick(interest.name)}
+            onClick={() => handleInterestClick(interest._id.$oid)}
           >
             {interest.name}
           </button>
