@@ -5,3 +5,16 @@ server/obj/
 server/.vs/
 server/bin/
 
+server/obj/project.assets.json
+server/obj/Debug/net8.0/TinderCloneBackV2.GeneratedMSBuildEditorConfig.editorconfig
+server/obj/Debug/net8.0/TinderCloneBackV2.assets.cache
+server/obj/Debug/net8.0/TinderCloneBackV2.AssemblyInfoInputs.cache
+server/obj/Debug/net8.0/TinderCloneBackV2.AssemblyInfo.cs
+server/obj/TinderCloneBackV2.csproj.nuget.dgspec.json
+server/obj/project.nuget.cache
+
+server/.vs/ProjectEvaluation/tinderclonebackv2.metadata.v8.bin
+server/.vs/ProjectEvaluation/tinderclonebackv2.projects.v8.bin
+server/.vs/TinderCloneBackV2/DesignTimeBuild/.dtbcache.v2
+server/.vs/TinderCloneBackV2/v17/.suo
+
