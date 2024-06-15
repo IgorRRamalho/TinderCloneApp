@@ -58,7 +58,12 @@
               "RelativeToolTip": "Services\\UserService.cs",
               "ViewState": "AQIAAC4AAAAAAAAAAAAkwDsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< HEAD
               "WhenOpened": "2024-06-15T23:18:31.035Z"
+=======
+              "WhenOpened": "2024-06-15T23:18:31.035Z",
+              "EditorCaption": ""
+>>>>>>> 7d2d7191676326357f827aaf81158dab08082da6
             },
             {
               "$type": "Document",

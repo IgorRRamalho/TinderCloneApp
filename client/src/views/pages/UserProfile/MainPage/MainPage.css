@@ -71,7 +71,11 @@ html {
 .fotter_buttons {
   display: flex;
   justify-content: space-around;
+<<<<<<< HEAD
   background-color: #f3f3f3;
+=======
+  background-color: #F3F3F3;
+>>>>>>> 7d2d7191676326357f827aaf81158dab08082da6
   padding: 10px;
   height: 82px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -90,6 +94,11 @@ html {
 }
 
 .fotter_buttons .active svg {
+<<<<<<< HEAD
   fill: #e94057;
   stroke: #f3f3f3;
+=======
+  fill: #E94057;
+  stroke: #F3F3F3;
+>>>>>>> 7d2d7191676326357f827aaf81158dab08082da6
 }

@@ -22,7 +22,11 @@ function App() {
           <Route path="/basic-info" element={<BasicInfoPage />}/>
           <Route path="/gender" element={<GenderPage/>}/>
           <Route path="/interests" element={<InterestsPage/>}/>
+<<<<<<< HEAD
           <Route path="/main/:userId" element={<MainPage/>}/>
+=======
+          <Route path="/main" element={<MainPage/>}/>
+>>>>>>> 7d2d7191676326357f827aaf81158dab08082da6
           <Route path="/match" element={<MatchPage/>}/>
           <Route path="/upload" element={<ImageUploadPage />}/>
           <Route path="/user/:userId" element={<UserProfilePage />}/>
