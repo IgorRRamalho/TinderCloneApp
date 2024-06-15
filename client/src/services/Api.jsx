@@ -26,3 +26,13 @@ export const addUser = async (userData) => {
   }
 };
 
+// Função para obter usuário por email
+export const getUserByEmail = async (email) => {
+  try {
+    const response = await axios.get(`${API_URL}email/${email}`);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao buscar usuário pelo email:', error);
+    throw error;
+  }
+};
