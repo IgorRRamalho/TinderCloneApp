@@ -11,8 +11,10 @@ builder.Services.AddControllers();
 builder.Services.Configure<TinderCloneDataBaseSettings>(
     builder.Configuration.GetSection("TinderCloneDB"));
 
-// Register UserService with the dependency injection container
+// Register services with the dependency injection container
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<SwipeService>();  
+builder.Services.AddScoped<MatchService>();  
 
 // Add support for Swagger for API documentation
 builder.Services.AddEndpointsApiExplorer();

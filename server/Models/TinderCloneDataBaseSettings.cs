@@ -13,5 +13,9 @@ namespace TinderClone.Models
         public string DataBaseName { get; set; } = null!;
 
         public string UserCollectionName { get; set; } = null!;
+
+        public string SwipeCollectionName { get; set; } = null!;
+        
+        public string MatchCollectionName { get; set; } = null!;
     }
 }

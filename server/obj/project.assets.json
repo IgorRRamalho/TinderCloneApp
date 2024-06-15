@@ -1653,11 +1653,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
+      "projectUniqueName": "C:\\GitHub\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
       "projectName": "TinderCloneBackV2",
-      "projectPath": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
+      "projectPath": "C:\\GitHub\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
       "packagesPath": "C:\\Users\\pacfa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\obj\\",
+      "outputPath": "C:\\GitHub\\TinderCloneApp\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pacfa\\AppData\\Roaming\\NuGet\\NuGet.Config",
