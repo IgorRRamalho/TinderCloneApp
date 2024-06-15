@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\GitHub\\TinderCloneApp\\server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\server\\services\\swipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:services\\swipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +50,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\GitHub\\TinderCloneApp\\server\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAkwDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T23:18:31.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -54,12 +70,11 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T11:20:28.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T11:20:28.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MatchesController.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Controllers\\MatchesController.cs",
               "RelativeDocumentMoniker": "Controllers\\MatchesController.cs",
@@ -67,12 +82,11 @@
               "RelativeToolTip": "Controllers\\MatchesController.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAAwFYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:53:53.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T07:53:53.328Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MatchService.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Services\\MatchService.cs",
               "RelativeDocumentMoniker": "Services\\MatchService.cs",
@@ -84,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SwipesController.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Controllers\\SwipesController.cs",
               "RelativeDocumentMoniker": "Controllers\\SwipesController.cs",
@@ -96,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SwipeService.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Services\\SwipeService.cs",
               "RelativeDocumentMoniker": "Services\\SwipeService.cs",
@@ -108,15 +122,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\GitHub\\TinderCloneApp\\server\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAAwHAAAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAqwBwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T08:42:35.349Z"
+              "WhenOpened": "2024-06-12T08:42:35.349Z",
+              "EditorCaption": ""
             }
           ]
         }

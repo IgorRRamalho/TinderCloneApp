@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getUserByEmail } from "../../../services/Api";
 import logo from "../../assets/trademark.svg";
 import "./signUpStyles.css";
 
@@ -28,9 +29,19 @@ export default function SignUp() {
     navigate("/");
   };
 
-  const handleSendEmail = () => {
-    // Lógica para enviar o email aqui
-    console.log("Email sent:", email);
+  const handleSendEmail = async () => {
+    try {
+      const user = await getUserByEmail(email);
+      if (user && user.id) {
+        console.log("User ID:", user.id);
+        // Redirecionar para a página principal com o ID do usuário
+        navigate(`/main/${user.id}`);
+      } else {
+        console.log("Usuário não encontrado");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar email:", error);
+    }
   };
 
   return (

@@ -1,43 +1,35 @@
 .profile-card {
-    position: relative;
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
-  
-  .profile-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .profile-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .photo-navigation {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  
-  .photo-navigation button {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .photo-navigation button:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-  
+  position: relative;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.profile-card .slick-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card .slick-list {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.profile-card img {
+  width: 100%;
+  height: auto;
+}
+
+.profile-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

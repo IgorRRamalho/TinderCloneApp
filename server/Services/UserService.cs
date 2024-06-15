@@ -54,8 +54,9 @@ public class UserService
     public async Task UpdateAsync(string id, User updateUser) =>
         await _Users.ReplaceOneAsync(x => x.Id == id, updateUser);
 
-
-
+    //Este método retornar um usuário ao fornecer email
+    public async Task<User> GetByEmailAsync(string email) =>
+           await _Users.Find<User>(user => user.Email == email).FirstOrDefaultAsync();
 
     //Este método remove um usuário da coleção com base em seu id.(DELETE)
     public async Task RemoveAsync(string id) =>

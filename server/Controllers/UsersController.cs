@@ -42,6 +42,19 @@ namespace TinderClone.Controllers
             return Ok(user);
         }
 
+        [HttpGet("email/{email}")]
+        public async Task<ActionResult<User>> GetByEmail(string email)
+        {
+            var user = await _usersService.GetByEmailAsync(email);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] User newUser)
         {
@@ -53,7 +66,6 @@ namespace TinderClone.Controllers
             await _usersService.CreateAsync(newUser);
             return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
         }
-
 
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, User updateUser)
@@ -86,7 +98,6 @@ namespace TinderClone.Controllers
 
             return NoContent();
         }
-
 
         [HttpGet("{userId:length(24)}/matchesPotenciais")]
         public async Task<ActionResult<List<User>>> GetPotentialMatches(string userId)

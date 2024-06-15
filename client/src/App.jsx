@@ -22,8 +22,8 @@ function App() {
           <Route path="/basic-info" element={<BasicInfoPage />}/>
           <Route path="/gender" element={<GenderPage/>}/>
           <Route path="/interests" element={<InterestsPage/>}/>
-          <Route path="/main" element={<MainPage/>}/>
-          <Route path="/match" element={<MainPage/>}/>
+          <Route path="/main/:userId" element={<MainPage/>}/>
+          <Route path="/match" element={<MatchPage/>}/>
           <Route path="/upload" element={<ImageUploadPage />}/>
           <Route path="/user/:userId" element={<UserProfilePage />}/>
         </Routes>
