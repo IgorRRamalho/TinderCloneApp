@@ -1,6 +1,6 @@
-using TinderClone.Services;
-using TinderClone.Models;
 using Microsoft.AspNetCore.Mvc;
+using TinderClone.Models;
+using TinderClone.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,38 +12,33 @@ namespace TinderClone.Controllers
     {
         private readonly SwipeService _swipeService;
 
-        public SwipesController(SwipeService swipeService) =>
+        public SwipesController(SwipeService swipeService)
+        {
             _swipeService = swipeService;
+        }
 
         [HttpGet]
-        public async Task<ActionResult<List<Swipe>>> Get()
-        {
-            var swipes = await _swipeService.GetAsync();
-            return Ok(swipes);
-        }
+        public async Task<ActionResult<List<Swipe>>> Get() =>
+            await _swipeService.GetAsync();
 
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Swipe>> Get(string id)
         {
             var swipe = await _swipeService.GetAsync(id);
 
-            if (swipe is null)
+            if (swipe == null)
             {
                 return NotFound();
             }
 
-            return Ok(swipe);
+            return swipe;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Swipe newSwipe)
+        public async Task<IActionResult> Create(Swipe newSwipe)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             await _swipeService.CreateAsync(newSwipe);
+
             return CreatedAtAction(nameof(Get), new { id = newSwipe.Id }, newSwipe);
         }
 
@@ -52,7 +47,7 @@ namespace TinderClone.Controllers
         {
             var swipe = await _swipeService.GetAsync(id);
 
-            if (swipe is null)
+            if (swipe == null)
             {
                 return NotFound();
             }
@@ -69,7 +64,7 @@ namespace TinderClone.Controllers
         {
             var swipe = await _swipeService.GetAsync(id);
 
-            if (swipe is null)
+            if (swipe == null)
             {
                 return NotFound();
             }

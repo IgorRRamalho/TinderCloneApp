@@ -2,6 +2,7 @@
 using TinderClone.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace TinderClone.Controllers
@@ -11,9 +12,13 @@ namespace TinderClone.Controllers
     public class UsersController : ControllerBase
     {
         private readonly UserService _usersService;
+        private readonly SwipeService _swipeService;
 
-        public UsersController(UserService usersService) =>
-            _usersService = usersService;
+        public UsersController(UserService userService, SwipeService swipeService)
+        {
+            _usersService = userService;
+            _swipeService = swipeService;
+        }
 
         #region "Métodos CRUD API"
 
@@ -80,6 +85,33 @@ namespace TinderClone.Controllers
             await _usersService.RemoveAsync(id);
 
             return NoContent();
+        }
+
+
+        [HttpGet("{userId:length(24)}/matchesPotenciais")]
+        public async Task<ActionResult<List<User>>> GetPotentialMatches(string userId)
+        {
+            var user = await _usersService.GetAsync(userId);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var swipedUserIds = (await _swipeService.GetAsync())
+                .Where(s => s.SwiperId == userId || s.SwipedUserId == userId)
+                .Select(s => s.SwiperId == userId ? s.SwipedUserId : s.SwiperId)
+                .ToHashSet();
+
+            var users = await _usersService.GetAsync();
+
+            var potentialMatches = users
+                .Where(u => u.Id != userId &&
+                            !swipedUserIds.Contains(u.Id) &&
+                            u.Interests.Any(i => user.Interests.Contains(i)))
+                .ToList();
+
+            return Ok(potentialMatches);
         }
 
         #endregion

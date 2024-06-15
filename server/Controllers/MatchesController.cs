@@ -64,6 +64,7 @@ namespace TinderClone.Controllers
             return NoContent();
         }
 
+
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {
@@ -77,6 +78,19 @@ namespace TinderClone.Controllers
             await _matchService.RemoveAsync(id);
 
             return NoContent();
+        }
+
+        [HttpGet("user/{userId:length(24)}")]
+        public async Task<ActionResult<List<Match>>> GetMatchesByUserId(string userId)
+        {
+            var matches = await _matchService.GetMatchesByUserIdAsync(userId);
+
+            if (matches == null || matches.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return matches;
         }
     }
 }

@@ -13,8 +13,8 @@ builder.Services.Configure<TinderCloneDataBaseSettings>(
 
 // Register services with the dependency injection container
 builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<SwipeService>();  
-builder.Services.AddScoped<MatchService>();  
+builder.Services.AddScoped<SwipeService>();  // Adicionando SwipeService
+builder.Services.AddScoped<MatchService>();  // Adicionando MatchService
 
 // Add support for Swagger for API documentation
 builder.Services.AddEndpointsApiExplorer();

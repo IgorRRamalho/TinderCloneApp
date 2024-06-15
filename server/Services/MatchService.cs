@@ -1,6 +1,8 @@
 using TinderClone.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace TinderClone.Services
 {
@@ -29,5 +31,15 @@ namespace TinderClone.Services
 
         public async Task RemoveAsync(string id) =>
             await _Matches.DeleteOneAsync(x => x.Id == id);
+
+        public async Task<List<Match>> GetMatchesByUserIdAsync(string userId)
+        {
+            var filter = Builders<Match>.Filter.Or(
+                Builders<Match>.Filter.Eq(m => m.User1Id, userId),
+                Builders<Match>.Filter.Eq(m => m.User2Id, userId)
+            );
+
+            return await _Matches.Find(filter).ToListAsync();
+        }
     }
 }
