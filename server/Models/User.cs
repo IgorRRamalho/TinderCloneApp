@@ -34,7 +34,7 @@ namespace TinderClone.Models
         [BsonElement("profile_photo")]
         [Required(ErrorMessage = "Profile photo is required.")]
         [Url(ErrorMessage = "Invalid URL.")]
-        public string ProfilePhoto { get; set; } = null!;
+        public string Profile_photo { get; set; } = null!;
 
         [BsonElement("interests")]
         [BsonRepresentation(BsonType.ObjectId)]

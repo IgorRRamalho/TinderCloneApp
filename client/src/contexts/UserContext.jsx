@@ -11,7 +11,7 @@ const UserProvider = ({ children }) => {
     age: "",
     gender: "",
     photos: [],
-    profilePhoto: "",
+    profile_photo: "",
     interests: [],
   });
 

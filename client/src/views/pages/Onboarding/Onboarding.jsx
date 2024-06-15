@@ -33,6 +33,7 @@ export default function Onboarding() {
 
   return (
     <>
+    
       <CarouselImages />
       <button className="create_account" onClick={goToBasicInfo}>
         Create an account
@@ -44,7 +45,7 @@ export default function Onboarding() {
           Sign In
         </button>
       </span>
-
+     
       
     </>
   );

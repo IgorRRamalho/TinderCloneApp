@@ -3,8 +3,7 @@ let users = [];
 // Função para adicionar usuário
 const addUser = (userData) => {
   const user = {
-    firstName: userData.name.split(' ')[0], // Primeiro nome
-    lastName: userData.name.split(' ')[1], // Último nome
+    name: userData.name,
     age: userData.age,
     email: userData.email,
     gender: userData.gender,

@@ -1,67 +1,70 @@
-.container-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .nav_buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  
-  .profile-card {
-    position: relative;
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-  }
-  
-  .profile-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .profile-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .profile-info h3,
-  .profile-info p {
-    margin: 5px 0;
-  }
-  
-  .action-buttons {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .action-buttons button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .action-buttons button:hover {
-    transform: scale(1.1);
-  }
-  
-  .action-buttons svg {
-    width: 24px;
-    height: 24px;
-  }
-  
+
+/* Ajustes para sombra e animação nos botões de ação */
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px 0;
+  background-color: white;
+}
+
+
+.action-buttons img {
+  overflow: hidden; /* Para garantir que a sombra não vaze fora da imagem */
+  transition: transform 0.3s; /* Adicionando transição suave para a transformação */
+}
+
+/* Ajustes específicos de tamanho e posição para cada botão */
+
+.action-buttons .SuperLike,
+.action-buttons .Dislike{
+  width: 150%;
+  height: 100%;
+
+}.action-buttons .SuperLike:hover,
+.action-buttons .Dislike:hover{
+  transform: scale(1.5); /* Aumenta a imagem ao passar o mouse */
+}
+
+
+
+.action-buttons .Like {
+  width: 160%;
+  height: 100%;
+}.action-buttons .Like:hover {
+  transform: scale(1.2); /* Aumenta a imagem ao passar o mouse */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+.discover-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: white;
+  height: 100%;
+  /* overflow: hidden; <-- Remova esta linha */
+}
+
+.profile-card {
+  position: relative;
+  width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+}

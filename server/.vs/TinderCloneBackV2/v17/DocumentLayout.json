@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\GitHub\\TinderCloneApp\\server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\github\\tindercloneapp\\server\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\GitHub\\TinderCloneApp\\server\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T11:20:28.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MatchesController.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Controllers\\MatchesController.cs",
               "RelativeDocumentMoniker": "Controllers\\MatchesController.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MatchService.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Services\\MatchService.cs",
               "RelativeDocumentMoniker": "Services\\MatchService.cs",
@@ -63,12 +80,11 @@
               "RelativeToolTip": "Services\\MatchService.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAuwCoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:53:23.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T07:53:23.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SwipesController.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Controllers\\SwipesController.cs",
               "RelativeDocumentMoniker": "Controllers\\SwipesController.cs",
@@ -76,12 +92,11 @@
               "RelativeToolTip": "Controllers\\SwipesController.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAiwBsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:31:57.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T07:31:57.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SwipeService.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Services\\SwipeService.cs",
               "RelativeDocumentMoniker": "Services\\SwipeService.cs",
@@ -89,12 +104,11 @@
               "RelativeToolTip": "Services\\SwipeService.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:07:32.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T07:07:32.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\GitHub\\TinderCloneApp\\server\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
@@ -102,8 +116,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AQIAAFwAAAAAAAAAAAAAwHAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T08:42:35.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T08:42:35.349Z"
             }
           ]
         }
