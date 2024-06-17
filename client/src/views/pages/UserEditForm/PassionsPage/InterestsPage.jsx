@@ -1,27 +1,39 @@
+/*
+========================================================================
+  Página de Interesses do Usuário
+  
+  Esta página permite ao usuário selecionar seus interesses para configurar 
+  seu perfil no aplicativo. São exibidos botões dos interesses disponíveis 
+  e o usuário pode selecionar até 5 interesses.
+  
+  Autor: Igor Rosa e Giovanna
+  Data: 08 de Junho de 2024
+  Versão: 1.2
+========================================================================
+*/
+
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../../../contexts/UserContext";
-import {
-  handleAddUser,
-  handleGetUserByEmail,
-} from "../../../../contexts/controllers/userController";
-import "./InterestsPage.css";
-
-// Assuming you still have access to the interests data, even if imported from a JSON
+import { handleAddUser } from "../../../../contexts/controllers/userController";
 import interestsData from "./TinderCloneDB.Interests.json";
+import "./InterestsPage.css";
 
 const InterestsPage = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
+
+  // Estado para armazenar os interesses selecionados
   const [selectedInterests, setSelectedInterests] = useState(
     user.interests || []
   );
 
+  // Atualiza os interesses selecionados quando o usuário muda
   useEffect(() => {
-    // Update selected interests when the page loads if user data is available
     setSelectedInterests(user.interests || []);
   }, [user]);
 
+  // Função para lidar com o clique em um interesse
   const handleInterestClick = (interestId) => {
     if (selectedInterests.includes(interestId)) {
       setSelectedInterests(selectedInterests.filter((id) => id !== interestId));
@@ -30,6 +42,7 @@ const InterestsPage = () => {
     }
   };
 
+  // Função para lidar com o envio do formulário
   const handleClick = async (e) => {
     e.preventDefault();
 
@@ -39,12 +52,11 @@ const InterestsPage = () => {
     };
 
     try {
-      setUser(updatedUser);
-      const addedUser = await handleAddUser(updatedUser);
-      console.log(addedUser)
+      setUser(updatedUser); // Atualiza o contexto do usuário com os interesses selecionados
+      const addedUser = await handleAddUser(updatedUser); // Adiciona o usuário com os novos interesses
+
       if (addedUser && addedUser.id) {
         console.log("User ID:", addedUser.id);
-
         navigate(`/main/${addedUser.id}`);
       } else {
         console.log("User not found after creation");
@@ -56,6 +68,7 @@ const InterestsPage = () => {
 
   return (
     <div className="container-page">
+      {/* Navegação */}
       <div className="nav_buttons">
         <span className="back-btn" onClick={() => navigate("/gender")}>
           <svg
@@ -72,9 +85,11 @@ const InterestsPage = () => {
             />
           </svg>
         </span>
+        {/* Espaço reservado para o botão de pular */}
         <span className="skip-btn" onClick={() => navigate("/main")}></span>
       </div>
 
+      {/* Título e descrição */}
       <div className="content_text">
         <h2>Your interests</h2>
         <p>
@@ -83,6 +98,7 @@ const InterestsPage = () => {
         </p>
       </div>
 
+      {/* Grade de interesses */}
       <div className="passions-grid">
         {interestsData.map((interest) => (
           <button
@@ -96,8 +112,11 @@ const InterestsPage = () => {
           </button>
         ))}
       </div>
+
+      {/* Contagem de interesses selecionados */}
       <p>{`You have selected ${selectedInterests.length} interest(s)`}</p>
 
+      {/* Botão de continuar */}
       <button
         className="confirm_button"
         onClick={handleClick}

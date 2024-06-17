@@ -1,31 +1,51 @@
+/*
+========================================================================
+  Página de Seleção de Gênero
+  
+  Esta página permite ao usuário selecionar seu gênero.
+  
+  Autor: Igor Rosa e Giovanna
+  Data: 08 de Junho de 2024
+  Versão: 1.8
+========================================================================
+*/
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../../../contexts/UserContext";
 import "./GenderPage.css";
-import arrow from "../../../assets/arrow.svg";
 
 const GenderPage = () => {
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
+
+  // Estado para armazenar o gênero selecionado
   const [gender, setGender] = useState(user.gender || "");
+  
+  // Estado para controlar a exibição das opções extras de gênero
   const [showExtraOptions, setShowExtraOptions] = useState(false);
 
+  // Função para lidar com a mudança de seleção de gênero
   const handleChange = (e) => {
     const selectedGender = e.target.value;
     setGender(selectedGender);
     setUser({ ...user, gender: selectedGender });
+
+    // Mostra as opções extras se "Choose another" for selecionado
     if (selectedGender === "Choose another") {
       setShowExtraOptions(true);
     } else {
       setShowExtraOptions(false);
     }
   };
+
+  // Função para lidar com o envio do formulário
   const handleSubmit = () => {
     navigate("/interests");
   };
 
   return (
     <div className="gender-page">
+      {/* Navegação */}
       <div className="nav_buttons">
         <span className="back-btn" onClick={() => navigate("/basic-info")}>
           <svg
@@ -42,13 +62,15 @@ const GenderPage = () => {
             />
           </svg>
         </span>
-        <span className="skip-btn" onClick={() => navigate("/location")}>
+        {/* Botão de pular */}
+        <span className="skip-btn" onClick={() => navigate("/interests")}>
           Skip
         </span>
       </div>
 
       <h2>I am a</h2>
 
+      {/* Container para seleção de gênero */}
       <div className="select-container">
         <input
           type="radio"
@@ -78,7 +100,6 @@ const GenderPage = () => {
           checked={gender === "Choose another"}
           onChange={handleChange}
         />
-
         <label htmlFor="choose-another">
           Choose another
           <svg
@@ -86,20 +107,18 @@ const GenderPage = () => {
             width="16"
             height="16"
             fill="currentColor"
-            class="bi bi-chevron-right"
+            className="bi bi-chevron-right"
             viewBox="0 0 16 16"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
             />
           </svg>
         </label>
-        <div
-          className={`extra-gender-options ${
-            showExtraOptions ? "visible" : ""
-          }`}
-        >
+
+        {/* Opções extras de gênero */}
+        <div className={`extra-gender-options ${showExtraOptions ? "visible" : ""}`}>
           <input
             type="radio"
             className="gender"
@@ -132,6 +151,7 @@ const GenderPage = () => {
         </div>
       </div>
 
+      {/* Botão de continuar */}
       <button className="confirm_button" onClick={handleSubmit}>
         Continue
       </button>

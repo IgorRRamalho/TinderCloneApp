@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\models\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:models\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\models\\tinderclonedatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:models\\tinderclonedatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\controllers\\swipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\swipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\services\\swipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,26 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\models\\swipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:models\\swipes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\controllers\\swipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\swipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:controllers\\matchescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|c:\\users\\pacfa\\documents\\github\\tindercloneapp\\server\\services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72BC5AD4-9AFB-4CF2-938C-48800232DA2D}|TinderCloneBackV2.csproj|solutionrelative:services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +62,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TinderCloneDataBaseSettings.cs",
+              "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Models\\TinderCloneDataBaseSettings.cs",
+              "RelativeDocumentMoniker": "Models\\TinderCloneDataBaseSettings.cs",
+              "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Models\\TinderCloneDataBaseSettings.cs",
+              "RelativeToolTip": "Models\\TinderCloneDataBaseSettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T10:08:22.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Match.cs",
+              "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Models\\Match.cs",
+              "RelativeDocumentMoniker": "Models\\Match.cs",
+              "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Models\\Match.cs",
+              "RelativeToolTip": "Models\\Match.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T07:45:36.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Swipes.cs",
               "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Models\\Swipes.cs",
               "RelativeDocumentMoniker": "Models\\Swipes.cs",
@@ -73,7 +107,7 @@
               "RelativeDocumentMoniker": "Services\\UserService.cs",
               "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Services\\UserService.cs",
               "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAgwD0AAAAvAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAkwD0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T03:06:10.361Z",
               "EditorCaption": ""
@@ -86,71 +120,72 @@
               "RelativeDocumentMoniker": "Models\\User.cs",
               "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Models\\User.cs",
               "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCcAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T03:06:10.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MatchesController.cs",
               "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Controllers\\MatchesController.cs",
               "RelativeDocumentMoniker": "Controllers\\MatchesController.cs",
               "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Controllers\\MatchesController.cs",
               "RelativeToolTip": "Controllers\\MatchesController.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAAwFYAAAAAAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAcwFIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T03:06:10.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "MatchService.cs",
               "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Services\\MatchService.cs",
               "RelativeDocumentMoniker": "Services\\MatchService.cs",
               "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Services\\MatchService.cs",
               "RelativeToolTip": "Services\\MatchService.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAuwCoAAAAJAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAwwCQAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T03:06:10.382Z"
+              "WhenOpened": "2024-06-17T03:06:10.382Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "SwipesController.cs",
               "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Controllers\\SwipesController.cs",
               "RelativeDocumentMoniker": "Controllers\\SwipesController.cs",
               "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Controllers\\SwipesController.cs",
               "RelativeToolTip": "Controllers\\SwipesController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAYwCcAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T03:06:10.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "SwipeService.cs",
               "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Services\\SwipeService.cs",
               "RelativeDocumentMoniker": "Services\\SwipeService.cs",
               "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Services\\SwipeService.cs",
               "RelativeToolTip": "Services\\SwipeService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAA5AAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAiwCgAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T03:06:10.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
               "ToolTip": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAiwGwAAAAiAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAuwHgAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T03:06:10.388Z",
               "EditorCaption": ""

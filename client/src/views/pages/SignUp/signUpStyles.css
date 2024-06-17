@@ -41,8 +41,6 @@
   opacity: 0px;
 }
 
-
-
 .main_container .main_content h2 {
   height: 27px;
   font-weight: 700;
@@ -85,7 +83,6 @@
   color: #e94057;
   text-decoration: none;
 }
-
 
 .input_wrapper {
   position: relative;
@@ -156,7 +153,6 @@
   cursor: pointer;
   font-size: 16px;
   transition: opacity 0.3s ease;
-
 }
 
 .button_continue:hover,
@@ -167,5 +163,3 @@
 .button_send_email {
   margin-top: 10px;
 }
-
-

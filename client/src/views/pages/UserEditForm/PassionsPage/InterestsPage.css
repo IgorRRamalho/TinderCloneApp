@@ -1,23 +1,24 @@
 .content_text p {
-    width: 295px;
-    height: 42px;
-  
- 
-font-size: 14px;
-font-weight: 400;
-line-height: 21px;
-text-align: left;
-color: #000000B2;
-
-
-    
+  width: 295px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000b2;
+}
+.content_text h2{
+  width: 295px;
+  height: 51px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 51px;
+  text-align: left;
 }
 
-.content_text{
-    width: 295px;
-height: 93px;
-
-
+.content_text {
+  width: 295px;
+  height: 93px;
+  justify-content: start;
 }
 
 .passions-grid {
@@ -51,4 +52,13 @@ height: 93px;
 .passion-button.selected {
   background-color: #ff5a5f;
   color: #fff;
+}
+
+.container-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  padding: 20px;
 }

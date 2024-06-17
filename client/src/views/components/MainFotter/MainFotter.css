@@ -1,0 +1,25 @@
+.footer_buttons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f3f3f3;
+  padding: 10px;
+  height: 82px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer_buttons a {
+  text-decoration: none;
+  transition: transform 0.3s; /* Adicionando transição suave para a transformação */
+}
+
+.footer_buttons a:hover {
+  transform: scale(1.2); /* Aumenta o item ao passar o mouse */
+}
+
+.footer_buttons .active svg {
+  fill: #e94057;
+  stroke: #f3f3f3;
+}

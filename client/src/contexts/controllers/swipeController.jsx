@@ -6,7 +6,7 @@ export const handleAddSwipe = async (swipeData) => {
     const newSwipe = await addSwipe(swipeData);
     return newSwipe;
   } catch (error) {
-    console.error('Erro ao adicionar swipe:', error);
+    console.error("Erro ao adicionar swipe:", error);
     throw error;
   }
 };

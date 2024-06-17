@@ -1,25 +1,37 @@
+/*
+========================================================================
+  Página de Informações Básicas do Perfil
+  
+  Esta página permite ao usuário preencher informações básicas como nome, 
+  sobrenome, data de nascimento e foto de perfil.
+  
+  Autor: Igor Rosa e Giovanna
+  Data: 08 de Junho de 2024
+  Versão: 1.8
+========================================================================
+*/
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import userImage from "../../../assets/user.png";
-import "primeicons/primeicons.css";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import { UserContext } from "../../../../contexts/UserContext";
-import "./BasicInfoPage.css";
 import { UploadButton } from "@bytescale/upload-widget-react";
+import { UserContext } from "../../../../contexts/UserContext";
+import userImage from "../../../assets/user.png";
+import "react-datepicker/dist/react-datepicker.css";
+import "primeicons/primeicons.css";
+import "./BasicInfoPage.css";
 
 const BasicInfoPage = () => {
+  // Contexto e navegação
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
-  const [profileImage, setProfileImage] = useState(
-    user.profileImage || userImage
-  );
+
+  // Estados locais para dados do usuário
+  const [profileImage, setProfileImage] = useState(user.profileImage || userImage);
   const [firstName, setFirstName] = useState(user.firstName || "");
   const [lastName, setLastName] = useState(user.lastName || "");
-  const [birthdate, setBirthdate] = useState(
-    user.birthdate ? new Date(user.birthdate) : null
-  );
+  const [birthdate, setBirthdate] = useState(user.birthdate ? new Date(user.birthdate) : null);
 
+  // Função para atualizar os estados de primeiro nome e último nome
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (name === "firstName") {
@@ -29,24 +41,24 @@ const BasicInfoPage = () => {
     }
   };
 
+  // Função para calcular a idade com base na data de nascimento
   const calculateAge = (birthdate) => {
     const today = new Date();
     const birthDate = new Date(birthdate);
     let age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
-    if (
-      monthDiff < 0 ||
-      (monthDiff === 0 && today.getDate() < birthDate.getDate())
-    ) {
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
     return age;
   };
 
+  // Função para gerar o email com base no primeiro nome e último nome
   const generateEmail = (firstName, lastName) => {
     return `${firstName.toLowerCase()}.${lastName.toLowerCase()}@hotmail.com`;
   };
 
+  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
     e.preventDefault();
     if (birthdate) {
@@ -57,19 +69,20 @@ const BasicInfoPage = () => {
         name: `${firstName} ${lastName}`,
         age: age,
         email: email,
-        profile_photo: profileImage, // Enviando link da foto de perfil
+        profile_photo: profileImage,
       }));
-      console.log(user)
-      navigate("/gender");
+      navigate("/gender"); // Navega para a próxima página após enviar o formulário
     } else {
       console.error("Please choose your birthday date.");
     }
   };
 
+  // Função para salvar a data de nascimento selecionada
   const handleSaveDate = (date) => {
     setBirthdate(date);
   };
 
+  // Função para lidar com o upload de imagem do usuário
   const handleImageUpload = (files) => {
     const imageUrl = files[0].fileUrl;
     setProfileImage(imageUrl);
@@ -83,6 +96,7 @@ const BasicInfoPage = () => {
       <h1 className="title">Profile details</h1>
       <div className="user_container">
         <div className="user_photo">
+          {/* Componente de upload de imagem */}
           <UploadButton
             options={{
               apiKey: "public_12a1yzf6raU4ee2CH84o9UJQfk7H",
@@ -92,11 +106,7 @@ const BasicInfoPage = () => {
           >
             {({ onClick }) => (
               <>
-                <img
-                  src={profileImage}
-                  alt="User"
-                  onClick={onClick}
-                />
+                <img src={profileImage} alt="User" onClick={onClick} />
                 <span className="import_photo">
                   <i className="pi pi-camera"></i>
                 </span>
@@ -106,6 +116,7 @@ const BasicInfoPage = () => {
         </div>
 
         <form onSubmit={handleSubmit}>
+          {/* Campo de entrada para o primeiro nome */}
           <div className="input_group">
             <span className="span">First name</span>
             <input
@@ -117,6 +128,7 @@ const BasicInfoPage = () => {
             />
           </div>
 
+          {/* Campo de entrada para o último nome */}
           <div className="input_group">
             <span className="span">Last name</span>
             <input
@@ -128,6 +140,7 @@ const BasicInfoPage = () => {
             />
           </div>
 
+          {/* Seleção de data de nascimento */}
           <div className="choose_date">
             <DatePicker
               selected={birthdate}
@@ -137,6 +150,7 @@ const BasicInfoPage = () => {
             />
           </div>
 
+          {/* Botão de confirmação para enviar o formulário */}
           <button type="submit" className="confirm_button">
             Confirm
           </button>

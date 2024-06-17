@@ -1,7 +1,7 @@
-import axios from 'axios';
+import axios from "axios";
 
 // const API_URL = 'http://localhost:5122/api/Users/';
-const API_URL = 'https://tinder-back.loca.lt/api/Users/';
+const API_URL = "https://tinder-back.loca.lt/api/Users/";
 
 // Função para obter usuários
 export const getUsers = async () => {
@@ -9,7 +9,7 @@ export const getUsers = async () => {
     const response = await axios.get(API_URL);
     return response.data;
   } catch (error) {
-    console.error('Erro ao buscar usuários:', error);
+    console.error("Erro ao buscar usuários:", error);
     throw error;
   }
 };
@@ -20,7 +20,7 @@ export const addUser = async (userData) => {
     const response = await axios.post(API_URL, userData);
     return response.data;
   } catch (error) {
-    console.error('Erro ao adicionar usuário:', error);
+    console.error("Erro ao adicionar usuário:", error);
     throw error;
   }
 };
@@ -31,7 +31,7 @@ export const getUserByEmail = async (email) => {
     const response = await axios.get(`${API_URL}email/${email}`);
     return response.data;
   } catch (error) {
-    console.error('Erro ao buscar usuário pelo email:', error);
+    console.error("Erro ao buscar usuário pelo email:", error);
     throw error;
   }
 };
@@ -42,7 +42,7 @@ export const getPotentialMatches = async (userId) => {
     const response = await axios.get(`${API_URL}${userId}/matchesPotenciais`);
     return response.data;
   } catch (error) {
-    console.error('Erro ao buscar matches potenciais:', error);
+    console.error("Erro ao buscar matches potenciais:", error);
     throw error;
   }
 };

@@ -1,0 +1,111 @@
+/* MatchesScreen.css */
+.matches-screen {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.matches-screen h1 {
+  position: absolute;
+  width: 295px;
+  height: 52px;
+  left: 40px;
+  top: 70px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 51px;
+  text-align: left;
+  color: #000;
+}
+
+.header p {
+  position: absolute;
+
+  left: 40px;
+  top: 125px;
+}
+.header img {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  left: 350px;
+  top: 70px;
+}
+
+.matches-screen p {
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Sk-Modernist";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.matches-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.match {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.match img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.match-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.match-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions button {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.actions .reject {
+  color: #e94057;
+}
+
+.actions .accept {
+  color: #4caf50;
+}
+
+.no-matches {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.no-matches p {
+  font-size: 18px;
+  color: #e94057;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}

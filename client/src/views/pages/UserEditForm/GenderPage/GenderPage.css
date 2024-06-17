@@ -54,7 +54,6 @@
   font-weight: 700;
   line-height: 51px;
   text-align: left;
-
   color: #000;
 }
 
@@ -64,6 +63,7 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 40px;
+  margin-left: 4em;
   height: auto;
 }
 
@@ -106,4 +106,8 @@ input[type="radio"]:checked + label {
 
 .extra-gender-options.visible {
   display: flex;
+}
+
+label{
+  cursor: pointer;
 }

@@ -23,4 +23,3 @@ const UserProvider = ({ children }) => {
 };
 
 export { UserContext, UserProvider };
-

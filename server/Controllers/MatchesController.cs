@@ -80,17 +80,19 @@ namespace TinderClone.Controllers
             return NoContent();
         }
 
-        [HttpGet("user/{userId:length(24)}")]
-        public async Task<ActionResult<List<Match>>> GetMatchesByUserId(string userId)
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<List<User>>> GetMatchesByUserId(string userId)
         {
-            var matches = await _matchService.GetMatchesByUserIdAsync(userId);
-
-            if (matches == null || matches.Count == 0)
+            try
             {
-                return NotFound();
+                var matchedUsers = await _matchService.GetMatchedUsers(userId);
+                return Ok(matchedUsers);
             }
-
-            return matches;
+            catch (Exception ex)
+            {
+                // Aqui você pode lidar com erros de maneira apropriada, como logar o erro e retornar um StatusCode específico.
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
     }
 }
