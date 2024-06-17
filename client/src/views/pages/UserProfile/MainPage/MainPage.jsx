@@ -1,32 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import { getUsers } from "../../../../services/Api";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { handleAddSwipe } from "../../../../contexts/controllers/swipeController";
+import { handleGetPotentialMatches } from "../../../../contexts/controllers/userController";
 import ProfileCard from "../../../components/Profile Card/ProfileCard";
 import "./MainPage.css";
 
 import deslike from "./dislike.png";
 import like from "./like.png";
 import superlike from "./superlike.png";
+import noUsersIcon from "./no-user.png"; // Ícone para quando não há mais usuários
 
 const MainPage = () => {
   const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
+  const { userId } = useParams();
+  const [potentialMatches, setPotentialMatches] = useState([]);
+  const [animating, setAnimating] = useState(false);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchPotentialMatches = async () => {
       try {
-        const usersData = await getUsers();
-        setUsers(usersData);
-        if (usersData.length > 0) {
-          console.log(usersData[0]);
-        }
+        const matches = await handleGetPotentialMatches(userId);
+        setPotentialMatches(matches);
       } catch (error) {
-        console.error("Erro ao buscar usuários:", error);
+        console.error("Erro ao buscar matches potenciais:", error);
       }
     };
 
-    fetchUsers();
-  }, []);
+    fetchPotentialMatches();
+  }, [userId]);
+
+  const handleSwipeAction = (swipedUserId, swipeChoice) => {
+    setPotentialMatches((prevMatches) => prevMatches.slice(1)); // Remove o perfil atual dos matches imediatamente
+
+    // Processa o swipe em segundo plano
+    handleAddSwipe({ swiperId: userId, swipedUserId, swipeChoice }).catch((error) => {
+      console.error("Erro ao realizar swipe:", error);
+    });
+  };
 
   return (
     <div className="discover-page">
@@ -60,14 +70,41 @@ const MainPage = () => {
         </span>
       </div>
 
-      {users.length > 0 ? <ProfileCard user={users[0]} /> : <p>Loading...</p>}
+      {potentialMatches.length > 0 ? (
+        <ProfileCard
+          user={potentialMatches[0]}
+          className={`profile-card ${animating ? "exit" : "enter"}`}
+        />
+      ) : (
+        <div className="no-more-users">
+          <img src={noUsersIcon} alt="No more users" />
+          <p>Não há mais usuários a se mostrar</p>
+        </div>
+      )}
 
       <div className="action-buttons">
-        <img src={deslike} alt="Dislike" className="Dislike" />
-
-        <img src={like} alt="Like" className="Like" />
-
-        <img src={superlike} alt="SuperLike" className="SuperLike" />
+        {potentialMatches.length > 0 && (
+          <>
+            <img
+              src={deslike}
+              alt="Dislike"
+              className="Dislike"
+              onClick={() => handleSwipeAction(potentialMatches[0].id, false)}
+            />
+            <img
+              src={like}
+              alt="Like"
+              className="Like"
+              onClick={() => handleSwipeAction(potentialMatches[0].id, true)}
+            />
+            <img
+              src={superlike}
+              alt="SuperLike"
+              className="SuperLike"
+              onClick={() => handleSwipeAction(potentialMatches[0].id, true)}
+            />
+          </>
+        )}
       </div>
 
       <div className="fotter_buttons">
@@ -100,7 +137,11 @@ const MainPage = () => {
             />
           </svg>
         </NavLink>
-        <NavLink to="/match" activeClassName="active" className="matches">
+        <NavLink
+          to={`/match/${userId}`}
+          activeClassName="active"
+          className="matches"
+        >
           <svg
             width="26"
             height="24"
@@ -127,7 +168,7 @@ const MainPage = () => {
           </svg>
         </NavLink>
         <NavLink
-          to="/user/:userId"
+          to={`/user/${userId}`}
           activeClassName="active"
           className="userInformation"
         >

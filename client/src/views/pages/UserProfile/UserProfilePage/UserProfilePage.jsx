@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { getUsers } from '../../../../services/Api';
+import { getUsers } from '../../../../services/userService';
 import './UserProfilePage.css';
 
 const UserProfilePage = () => {

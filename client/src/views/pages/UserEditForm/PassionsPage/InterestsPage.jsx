@@ -1,10 +1,13 @@
-import  React, { useContext, useState, useEffect } from "react";
-import { UserContext } from "../../../../contexts/UserContext";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { handleAddUser } from "../../../../contexts/controllers/userController";
+import { UserContext } from "../../../../contexts/UserContext";
+import {
+  handleAddUser,
+  handleGetUserByEmail,
+} from "../../../../contexts/controllers/userController";
 import "./InterestsPage.css";
 
-// Supondo que você ainda tenha acesso aos dados de interesse, mesmo que importados de um JSON
+// Assuming you still have access to the interests data, even if imported from a JSON
 import interestsData from "./TinderCloneDB.Interests.json";
 
 const InterestsPage = () => {
@@ -15,7 +18,7 @@ const InterestsPage = () => {
   );
 
   useEffect(() => {
-    // Atualizar interesses selecionados ao carregar a página, se houver dados do usuário
+    // Update selected interests when the page loads if user data is available
     setSelectedInterests(user.interests || []);
   }, [user]);
 
@@ -29,21 +32,25 @@ const InterestsPage = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    setUser({
+
+    const updatedUser = {
       ...user,
       interests: selectedInterests,
-    });
+    };
 
     try {
-      const updatedUser = {
-        ...user,
-        interests: selectedInterests,
-      };
-      console.log(updatedUser)
-      await handleAddUser(updatedUser);
-      navigate("/main"); // Navegar para a página de sucesso ou próxima etapa
+      setUser(updatedUser);
+      const addedUser = await handleAddUser(updatedUser);
+      console.log(addedUser)
+      if (addedUser && addedUser.id) {
+        console.log("User ID:", addedUser.id);
+
+        navigate(`/main/${addedUser.id}`);
+      } else {
+        console.log("User not found after creation");
+      }
     } catch (error) {
-      console.error("Erro ao adicionar usuário:", error);
+      console.error("Error adding user:", error);
     }
   };
 

@@ -61,6 +61,7 @@ public class UserService
     //Este método remove um usuário da coleção com base em seu id.(DELETE)
     public async Task RemoveAsync(string id) =>
         await _Users.DeleteOneAsync(x => x.Id == id);
+    
     #endregion
 
 

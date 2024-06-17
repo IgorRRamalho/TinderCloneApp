@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getUserByEmail } from "../../../services/Api";
+import { getUserByEmail } from "../../../services/userService";
 import logo from "../../assets/trademark.svg";
 import "./signUpStyles.css";
 

@@ -21,7 +21,6 @@ const GenderPage = () => {
     }
   };
   const handleSubmit = () => {
-    console.log(user) 
     navigate("/interests");
   };
 

@@ -71,11 +71,7 @@ html {
 .fotter_buttons {
   display: flex;
   justify-content: space-around;
-<<<<<<< HEAD
   background-color: #f3f3f3;
-=======
-  background-color: #F3F3F3;
->>>>>>> 7d2d7191676326357f827aaf81158dab08082da6
   padding: 10px;
   height: 82px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -94,11 +90,58 @@ html {
 }
 
 .fotter_buttons .active svg {
-<<<<<<< HEAD
   fill: #e94057;
   stroke: #f3f3f3;
-=======
-  fill: #E94057;
-  stroke: #F3F3F3;
->>>>>>> 7d2d7191676326357f827aaf81158dab08082da6
+}
+
+
+/* Adicionando animações de entrada e saída */
+@keyframes slideOutLeft {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.profile-card.exit {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.profile-card.enter {
+  animation: slideInRight 0.5s forwards;
+}
+
+/* Ajustando tamanho das imagens e profile card */
+.profile-card img {
+  max-height: 535px;
+  width: auto;
+  display: block;
+}
+
+.profile-card {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 535px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-more-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.no-more-users img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }

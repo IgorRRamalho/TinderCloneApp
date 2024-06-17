@@ -57,7 +57,7 @@ const BasicInfoPage = () => {
         name: `${firstName} ${lastName}`,
         age: age,
         email: email,
-        profilePhoto: profileImage, // Enviando link da foto de perfil
+        profile_photo: profileImage, // Enviando link da foto de perfil
       }));
       console.log(user)
       navigate("/gender");

@@ -21,7 +21,6 @@ namespace TinderClone.Models
         [BsonElement("swipeChoice")]
         public bool SwipeChoice { get; set; }
 
-        [BsonElement("timestamp")]
-        public DateTime Timestamp { get; set; }
+  
     }
 }
