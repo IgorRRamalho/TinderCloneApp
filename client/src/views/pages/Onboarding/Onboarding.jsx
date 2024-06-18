@@ -38,9 +38,8 @@ export default function Onboarding() {
       <button className="create_account" onClick={goToBasicInfo}>
         Create an account {/* Botão para criar uma conta */}
       </button>
-
       <span className="sign_in">
-        Already have an account?{" "} {/* Texto indicando que já possui uma conta */}
+        Already have an account? {/* Texto indicando que já possui uma conta */}
         <button onClick={goToSignUpPage} className="sign_in_button">
           Sign In {/* Botão para entrar na conta */}
         </button>

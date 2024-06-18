@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wRIQ08GHOPk=",
+  "dgSpecHash": "0NsS/M/P+F8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pacfa\\Documents\\Github\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
+  "projectFilePath": "C:\\GitHub\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pacfa\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\pacfa\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

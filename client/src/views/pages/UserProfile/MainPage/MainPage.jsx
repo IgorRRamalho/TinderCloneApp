@@ -8,9 +8,8 @@ import "./MainPage.css";
 import MainFotter from "../../../components/MainFotter/MainFotter";
 import deslike from "./dislike.png";
 import like from "./like.png";
-import noUsersIcon from "./no-user.png"; 
+import noUsersIcon from "./no-user.png";
 import superlike from "./superlike.png";
-
 
 /*
 ========================================================================
