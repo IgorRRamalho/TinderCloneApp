@@ -39,9 +39,8 @@ export const handleGetUserByEmail = async (email) => {
   }
 };
 
-export const handleGetPotentialMatches = async () => {
+export const handleGetPotentialMatches = async (userId) => {
   try {
-    const userId = extractUserIdFromURL();
     const potentialMatches = await getPotentialMatches(userId);
     return potentialMatches;
   } catch (error) {

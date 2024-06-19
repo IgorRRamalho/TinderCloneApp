@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TinderCloneBackV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+140144a52248ef22bfa66a6cd7a8e57788119ff4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39f3765a50419a505c5927d04a9a0980237a804f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TinderCloneBackV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TinderCloneBackV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

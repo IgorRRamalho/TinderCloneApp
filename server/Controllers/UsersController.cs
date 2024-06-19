@@ -109,13 +109,16 @@ namespace TinderClone.Controllers
                 return NotFound();
             }
 
+            // Pegue todos os swipes onde o usuário atual é o swiper
             var swipedUserIds = (await _swipeService.GetAsync())
-                .Where(s => s.SwiperId == userId || s.SwipedUserId == userId)
-                .Select(s => s.SwiperId == userId ? s.SwipedUserId : s.SwiperId)
+                .Where(s => s.SwiperId == userId)
+                .Select(s => s.SwipedUserId)
                 .ToHashSet();
 
             var users = await _usersService.GetAsync();
 
+            // Filtre usuários que não sejam o próprio usuário, que não tenham sido swiped pelo usuário atual,
+            // e que compartilhem pelo menos um interesse
             var potentialMatches = users
                 .Where(u => u.Id != userId &&
                             !swipedUserIds.Contains(u.Id) &&
@@ -124,6 +127,7 @@ namespace TinderClone.Controllers
 
             return Ok(potentialMatches);
         }
+
 
         #endregion
     }

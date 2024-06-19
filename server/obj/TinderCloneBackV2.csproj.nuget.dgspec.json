@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\TinderCloneApp\\server\\TinderCloneBackV2.csproj": {}
+    "C:\\Users\\IgorRosaRamalho\\Desktop\\github\\TinderCloneApp\\server\\TinderCloneBackV2.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\TinderCloneApp\\server\\TinderCloneBackV2.csproj": {
+    "C:\\Users\\IgorRosaRamalho\\Desktop\\github\\TinderCloneApp\\server\\TinderCloneBackV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
+        "projectUniqueName": "C:\\Users\\IgorRosaRamalho\\Desktop\\github\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
         "projectName": "TinderCloneBackV2",
-        "projectPath": "C:\\GitHub\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
-        "packagesPath": "C:\\Users\\pacfa\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\TinderCloneApp\\server\\obj\\",
+        "projectPath": "C:\\Users\\IgorRosaRamalho\\Desktop\\github\\TinderCloneApp\\server\\TinderCloneBackV2.csproj",
+        "packagesPath": "C:\\Users\\IgorRosaRamalho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\IgorRosaRamalho\\Desktop\\github\\TinderCloneApp\\server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pacfa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\IgorRosaRamalho\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

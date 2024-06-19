@@ -12,28 +12,28 @@
 ========================================================================
 */
 
+// InterestsPage.jsx
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../../../contexts/UserContext";
 import { handleAddUser } from "../../../../contexts/controllers/userController";
 import interestsData from "./TinderCloneDB.Interests.json";
 import "./InterestsPage.css";
+import { UserIdContext } from "../../../../contexts/UserIdContext";
 
 const InterestsPage = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
+  const { setUserId } = useContext(UserIdContext);
 
-  // Estado para armazenar os interesses selecionados
   const [selectedInterests, setSelectedInterests] = useState(
     user.interests || []
   );
 
-  // Atualiza os interesses selecionados quando o usuário muda
   useEffect(() => {
     setSelectedInterests(user.interests || []);
   }, [user]);
 
-  // Função para lidar com o clique em um interesse
   const handleInterestClick = (interestId) => {
     if (selectedInterests.includes(interestId)) {
       setSelectedInterests(selectedInterests.filter((id) => id !== interestId));
@@ -42,7 +42,6 @@ const InterestsPage = () => {
     }
   };
 
-  // Função para lidar com o envio do formulário
   const handleClick = async (e) => {
     e.preventDefault();
 
@@ -52,12 +51,13 @@ const InterestsPage = () => {
     };
 
     try {
-      setUser(updatedUser); // Atualiza o contexto do usuário com os interesses selecionados
-      const addedUser = await handleAddUser(updatedUser); // Adiciona o usuário com os novos interesses
+      setUser(updatedUser);
+      const addedUser = await handleAddUser(updatedUser);
 
       if (addedUser && addedUser.id) {
+        setUserId(addedUser.id); // Armazena o ID do usuário no contexto
         console.log("User ID:", addedUser.id);
-        navigate(`/main/${addedUser.id}`);
+        navigate("/main");
       } else {
         console.log("User not found after creation");
       }
@@ -85,7 +85,6 @@ const InterestsPage = () => {
             />
           </svg>
         </span>
-        {/* Espaço reservado para o botão de pular */}
         <span className="skip-btn" onClick={() => navigate("/main")}></span>
       </div>
 
@@ -129,3 +128,4 @@ const InterestsPage = () => {
 };
 
 export default InterestsPage;
+

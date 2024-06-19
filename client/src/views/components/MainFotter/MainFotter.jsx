@@ -2,14 +2,14 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./MainFotter.css"; // Estilo CSS para o footer
 
-const MainFooter = ({ userId, activeScreen }) => {
+const MainFooter = ({ activeScreen }) => {
   const location = useLocation();
-  console.log(userId);
+
 
   return (
     <div className="footer_buttons">
       <NavLink
-        to={`/main/${userId}`}
+        to={`/main/`}
         exact
         className={`mainScreen ${activeScreen === "main" ? "active" : ""}`}
       >
@@ -42,7 +42,7 @@ const MainFooter = ({ userId, activeScreen }) => {
         </svg>
       </NavLink>
       <NavLink
-        to={`/match/${userId}`}
+        to={`/match`}
         className={`matches ${activeScreen === "match" ? "active" : ""}`}
       >
         <svg
@@ -71,7 +71,7 @@ const MainFooter = ({ userId, activeScreen }) => {
         </svg>
       </NavLink>
       <NavLink
-        to={`/user/${userId}`}
+        to={`/user/`}
         className={`userInformation ${activeScreen === "user" ? "active" : ""}`}
       >
         <svg

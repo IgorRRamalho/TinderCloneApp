@@ -1,6 +1,8 @@
+// App.js
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { UserProvider } from "./contexts/UserContext";
+import { UserIdProvider } from "./contexts/UserIdContext";
 
 import BasicInfoPage from "./views/pages/UserEditForm/BasicInfoPage/BasicInfoPage";
 import GenderPage from "./views/pages/UserEditForm/GenderPage/GenderPage";
@@ -15,19 +17,21 @@ import UserProfilePage from "./views/pages/UserProfile/UserProfilePage/UserProfi
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Onboarding />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/basic-info" element={<BasicInfoPage />} />
-          <Route path="/gender" element={<GenderPage />} />
-          <Route path="/interests" element={<InterestsPage />} />
-          <Route path="/main/:userId" element={<MainPage />} />
-          <Route path="/match/:userId" element={<MatchesScreen />} />
-          <Route path="/upload/:userId" element={<ImageUploadPage />} />
-          <Route path="/user/:userId" element={<UserProfilePage />} />
-        </Routes>
-      </BrowserRouter>
+      <UserIdProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Onboarding />} />
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/basic-info" element={<BasicInfoPage />} />
+            <Route path="/gender" element={<GenderPage />} />
+            <Route path="/interests" element={<InterestsPage />} />
+            <Route path="/main" element={<MainPage />} />
+            <Route path="/match" element={<MatchesScreen />} />
+            <Route path="/upload" element={<ImageUploadPage />} />
+            <Route path="/user" element={<UserProfilePage />} />
+          </Routes>
+        </BrowserRouter>
+      </UserIdProvider>
     </UserProvider>
   );
 }

@@ -1,13 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { handleGetMatchesByID } from "../../../../contexts/controllers/matchesController";
-import { extractUserIdFromURL } from "../../../../contexts/controllers/userController";
-import MainFotter from "../../../components/MainFotter/MainFotter";
-import "./MatchesScreen.css";
-
-import foto from "./btn.png";
-
 /*
-========================================================================
+============================================================================
   Tela de Matches
   
   Esta tela exibe os matches do usuário.
@@ -15,13 +7,19 @@ import foto from "./btn.png";
   Autor: Igor Rosa e Giovanna
   Data: 08 de Junho de 2024
   Versão: 1.8
-========================================================================
+============================================================================
 */
+import React, { useEffect, useState, useContext } from "react";
+import { handleGetMatchesByID } from "../../../../contexts/controllers/matchesController";
+import MainFotter from "../../../components/MainFotter/MainFotter";
+import { UserIdContext } from "../../../../contexts/UserIdContext";
+import "./MatchesScreen.css";
+
+import foto from "./btn.png";
 
 const MatchesScreen = () => {
+  const { userId } = useContext(UserIdContext);
   const [matches, setMatches] = useState([]);
-  const userId = extractUserIdFromURL();
-  console.log(userId);
 
   useEffect(() => {
     const fetchMatches = async () => {
@@ -33,18 +31,20 @@ const MatchesScreen = () => {
       }
     };
 
-    fetchMatches();
+    if (userId) {
+      fetchMatches();
+    }
   }, [userId]);
 
   if (!userId) {
     return <div>Loading...</div>;
-  } else
+  } else {
     return (
       <div className="container">
         <div className="matches-screen">
           <div className="header">
             <h1>Matches</h1>
-            <img src={foto} alt="" />
+            <img src={foto} alt="Icon" />
             <p>This is a list of people who have liked you and your matches.</p>
           </div>
 
@@ -67,9 +67,10 @@ const MatchesScreen = () => {
             </div>
           )}
         </div>
-        <MainFotter userId={userId} activeScreen="match" />
+        <MainFotter activeScreen="match" />
       </div>
     );
+  }
 };
 
 export default MatchesScreen;

@@ -9,16 +9,16 @@
   Versão: 1.8
 ========================================================================
 */
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserIdContext } from "../../../../contexts/UserIdContext";
 import { getUsers } from "../../../../services/userService"; // Importa a função para buscar usuários do serviço
 import MainFooter from "../../../components/MainFotter/MainFotter"; // Componente de rodapé principal
 import "./UserProfilePage.css"; // Estilos específicos para a página de perfil do usuário
 
-
 const UserProfilePage = () => {
   const navigate = useNavigate(); // Hook de navegação do React Router
-  const { userId } = useParams(); // Obtém o parâmetro de rota userId
+  const { userId } = useContext(UserIdContext);
   const [user, setUser] = useState(null); // Estado para armazenar os dados do usuário
 
   // Efeito para buscar o usuário ao montar o componente
@@ -51,7 +51,8 @@ const UserProfilePage = () => {
           <img key={index} src={photo} alt={`User Photo ${index}`} /> // Renderiza as fotos do usuário
         ))}
       </div>
-      <MainFooter userId={userId} activeScreen="user" /> {/* Rodapé principal com o ID do usuário */}
+      <MainFooter activeScreen="user" />{" "}
+      {/* Rodapé principal com o ID do usuário */}
     </div>
   );
 };

@@ -1,16 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { handleAddSwipe } from "../../../../contexts/controllers/swipeController";
-import { handleGetPotentialMatches } from "../../../../contexts/controllers/userController";
-import ProfileCard from "../../../components/Profile Card/ProfileCard";
-import "./MainPage.css";
-
-import MainFotter from "../../../components/MainFotter/MainFotter";
-import deslike from "./dislike.png";
-import like from "./like.png";
-import noUsersIcon from "./no-user.png";
-import superlike from "./superlike.png";
-
 /*
 ========================================================================
   Página Principal - Swipe de Usuários
@@ -22,15 +9,29 @@ import superlike from "./superlike.png";
   Versão: 1.8
 ========================================================================
 */
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserIdContext } from "../../../../contexts/UserIdContext";
+import { handleAddSwipe } from "../../../../contexts/controllers/swipeController";
+import { handleGetPotentialMatches } from "../../../../contexts/controllers/userController";
+import MainFotter from "../../../components/MainFotter/MainFotter";
+import ProfileCard from "../../../components/Profile Card/ProfileCard";
+import "./MainPage.css";
+
+import deslike from "./dislike.png";
+import like from "./like.png";
+import noUsersIcon from "./no-user.png";
+import superlike from "./superlike.png";
 
 const MainPage = () => {
   const navigate = useNavigate();
-  const { userId } = useParams();
+  const { userId } = useContext(UserIdContext);
   const [potentialMatches, setPotentialMatches] = useState([]);
 
   useEffect(() => {
     const fetchPotentialMatches = async () => {
       try {
+        console.log(userId)
         const matches = await handleGetPotentialMatches(userId);
         setPotentialMatches(matches);
       } catch (error) {
@@ -42,9 +43,8 @@ const MainPage = () => {
   }, [userId]);
 
   const handleSwipeAction = (swipedUserId, swipeChoice) => {
-    setPotentialMatches((prevMatches) => prevMatches.slice(1)); // Remove o perfil atual dos matches imediatamente
+    setPotentialMatches((prevMatches) => prevMatches.slice(1));
 
-    // Processa o swipe em segundo plano
     handleAddSwipe({ swiperId: userId, swipedUserId, swipeChoice }).catch(
       (error) => {
         console.error("Erro ao realizar swipe:", error);
@@ -118,7 +118,7 @@ const MainPage = () => {
         )}
       </div>
 
-      <MainFotter userId={userId} activeScreen="main" />
+      <MainFotter activeScreen="main" />
     </div>
   );
 };

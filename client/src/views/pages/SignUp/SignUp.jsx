@@ -9,14 +9,17 @@
   Versão: 1.8
 ========================================================================
 */
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { getUserByEmail } from "../../../services/userService";
 import logo from "../../assets/trademark.svg";
 import "./signUpStyles.css";
+import { UserIdContext } from "../../../contexts/UserIdContext";
+
 
 export default function SignUp() {
   const [showEmailInput, setShowEmailInput] = useState(false);
+  const { setUserId } = useContext(UserIdContext);
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
@@ -33,8 +36,8 @@ export default function SignUp() {
       const user = await getUserByEmail(email);
       if (user && user.id) {
         console.log("User ID:", user.id);
-        // Redirecionar para a página principal com o ID do usuário
-        navigate(`/main/${user.id}`);
+        setUserId(user.id); // Armazena o ID do usuário no contexto
+        navigate("/main");
       } else {
         console.log("Usuário não encontrado");
       }
@@ -42,6 +45,7 @@ export default function SignUp() {
       console.error("Erro ao enviar email:", error);
     }
   };
+  
 
   return (
     <>
